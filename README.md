@@ -242,3 +242,11 @@ Attack command: allow for multiple words so that player can attack with weapons 
 Dodge command?
 
 PUT COMMANDS IN PLAYER CLASS.
+
+TO-DO List: 
+Camron -
+Activate Command 
+Attack Command 
+Dig Command 
+Inspect Command 
+Inventory Command 
