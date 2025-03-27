@@ -1,0 +1,201 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\slxnt\\Downloads\\ModifytoYour_FirstName_Lastname.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\helpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\helpcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\quitcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\quitcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\gocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\gocommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\room.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\parser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|c:\\users\\slxnt\\downloads\\startergame1.0\\startergame\\startergame\\commandwords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F6FE53F2-3963-480D-A1D2-8D571A0DD9B8}|StarterGame\\StarterGame.csproj|solutionrelative:startergame\\commandwords.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ModifytoYour_FirstName_Lastname.cpp",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\ModifytoYour_FirstName_Lastname.cpp",
+              "RelativeDocumentMoniker": "..\\..\\ModifytoYour_FirstName_Lastname.cpp",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\ModifytoYour_FirstName_Lastname.cpp*",
+              "RelativeToolTip": "..\\..\\ModifytoYour_FirstName_Lastname.cpp*",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAAEIAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-22T23:17:41.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Program.cs",
+              "RelativeDocumentMoniker": "StarterGame\\Program.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Program.cs",
+              "RelativeToolTip": "StarterGame\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:28.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Player.cs",
+              "RelativeDocumentMoniker": "StarterGame\\Player.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Player.cs",
+              "RelativeToolTip": "StarterGame\\Player.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAowBYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:26.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Parser.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Parser.cs",
+              "RelativeDocumentMoniker": "StarterGame\\Parser.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Parser.cs",
+              "RelativeToolTip": "StarterGame\\Parser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:24.67Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HelpCommand.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\HelpCommand.cs",
+              "RelativeDocumentMoniker": "StarterGame\\HelpCommand.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\HelpCommand.cs",
+              "RelativeToolTip": "StarterGame\\HelpCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:21.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GoCommand.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\GoCommand.cs",
+              "RelativeDocumentMoniker": "StarterGame\\GoCommand.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\GoCommand.cs",
+              "RelativeToolTip": "StarterGame\\GoCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:18.599Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Game.cs",
+              "RelativeDocumentMoniker": "StarterGame\\Game.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Game.cs",
+              "RelativeToolTip": "StarterGame\\Game.cs",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:16.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CommandWords.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\CommandWords.cs",
+              "RelativeDocumentMoniker": "StarterGame\\CommandWords.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\CommandWords.cs",
+              "RelativeToolTip": "StarterGame\\CommandWords.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:13.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Command.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Command.cs",
+              "RelativeDocumentMoniker": "StarterGame\\Command.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Command.cs",
+              "RelativeToolTip": "StarterGame\\Command.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:03.675Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Room.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Room.cs",
+              "RelativeDocumentMoniker": "StarterGame\\Room.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\Room.cs",
+              "RelativeToolTip": "StarterGame\\Room.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:01.948Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuitCommand.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\QuitCommand.cs",
+              "RelativeDocumentMoniker": "StarterGame\\QuitCommand.cs",
+              "ToolTip": "C:\\Users\\slxnt\\Downloads\\StarterGame1.0\\StarterGame\\StarterGame\\QuitCommand.cs",
+              "RelativeToolTip": "StarterGame\\QuitCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:04:31.221Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
