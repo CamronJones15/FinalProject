@@ -11,6 +11,12 @@ namespace StarterGame{
 
             _item = item; 
         }
+
+        public void Execute(){
+
+            Console.WriteLine($"You picked up the{_item}.")
+            
+        }
     }
 
     

@@ -245,8 +245,8 @@ PUT COMMANDS IN PLAYER CLASS.
 
 TO-DO List: 
 Camron -
-Activate Command 
-Attack Command 
+Activate Command #
+Attack Command #
 Dig Command 
-Inspect Command 
+Inspect Command #
 Inventory Command 
