@@ -10,6 +10,8 @@ namespace StarterGame
     public class Player
     {
         private Room _currentRoom = null;
+
+        
         public Room CurrentRoom { get { return _currentRoom; } set { _currentRoom = value; } }
 
         public Player(Room room)
@@ -30,6 +32,40 @@ namespace StarterGame
                 ErrorMessage("\nThere is no door on " + direction);
             }
         }
+
+        //added code from attack command into this method to ensure proper implementation of design pattern.
+        public void AttackThis(string _enemy){
+            //method that takes a string of an enemy, and possibly an item name
+            //method then checks to see if the enemy is present within the room and if that item is in the characters inventory
+            //if the item doesn't exist in the inventory then output an error message using the error message method
+
+            
+            List<Item> weapons = _inventory.GetWeapons();
+            if(weapons.Count == 0)
+            {
+                Console.WriteLine($"You cannot attack {_enemy} with no weapons!!");
+                return;
+            }
+            Console.WriteLine($"Choose a weapon to attack {_enemy}:");
+            for (int i = 0; i < weapons.Count; i++){
+                Console.WriteLine($"{i + 1}. {weapons[i].Name}");
+
+            }
+
+            Console.Write("Enter the number of your choice:");
+            string input = Console.ReadLine();
+
+            if (int.TryParse(input, out int choice) && choice > 0 && choice <= weapons.Count)
+            {
+                Item selectedWeapon = weapons[choice - 1];
+                Console.WriteLine($"You swing your {selectedWeapon.Name} at the {_enemy} and deal damage!");
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice! You hesitate and miss your attack.");
+            }
+        }
+
 
         public void OutputMessage(string message)
         {
