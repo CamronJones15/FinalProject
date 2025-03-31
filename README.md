@@ -247,6 +247,6 @@ TO-DO List:
 Camron -
 Activate Command #
 Attack Command #
-Dig Command 
+Dig Command #
 Inspect Command #
 Inventory Command 
