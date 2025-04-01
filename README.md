@@ -191,8 +191,8 @@ Bonus Challenge
 
 If you got 7 or more correct, the marionettes allow you to leave. If not… well, let's just say they have other plans for you.
 
-6th room – A room that is spinning around causing the player to feel disoriented and impedes his movements and attempts of actions. The door to the next room is visible and open but because the player is dizzy from the spinning he falls over during every attempt to leave. To eventually leave the room the player must find a way for the room to stop spinning. (Just an outline for now, thinking of making the room be carousal themed with the actual room spinning or it being drug induced. Depending on what we decide is how we’ll set up the escape plan).
-
+6th room – // A room that is spinning around causing the player to feel disoriented and impedes his movements and attempts of actions. The door to the next room is visible and open but because the player is dizzy from the spinning he falls over during every attempt to leave. To eventually leave the room the player must find a way for the room to stop spinning. (Just an outline for now, thinking of making the room be carousal themed with the actual room spinning or it being drug induced. Depending on what we decide is how we’ll set up the escape plan). //
+|
 7th room: A mirror maze room where the player must find a specific path to escape to the next room. Include false exits that shatter when the player walks through them damaging him (would need to add a health system for the player, can do hit points and then once the player walks through a certain number of false doors he dies).
 
 Due to this room being a maze, we can have this room be the only one in the game that doesn’t include a timer.
