@@ -249,4 +249,49 @@ Activate Command #
 Attack Command #
 Dig Command #
 Inspect Command #
-Inventory Command 
+Inventory Command #
+
+To Do List -
+Camron 
+Create Rooms for Maze 
+Implement Inventory to Player Class 
+
+Vanishing Phrase Room 
+
+Vanishing Phrases are going to pop up with missing letters in a sentence. The Player has to guess the letters of the missing phrase then type in the whole phrase. 
+
+Ex. 
+MSSNG VWLS PZZL
+
+MISSING VOWELS PUZZLE
+
+TH NLY THNG W HV T FR S FR TSLF
+
+THE ONLY THING WE HAVE TO FEAR IS FEAR ITSELF
+
+
+Y CNT CHNGR WH CHNGS Y BT Y CN CHS HW Y RSPND
+
+YOU CAN’T CHANGE WHAT CHANGES YOU, BUT YOU CAN CHOOSE HOW YOU RESPOND
+
+The Endless Room
+
+The Player find theirselves in a dark corridor that streches endlessly. They can move left or right but if they choose the wrong way it will loops them back. 
+
+You stand in a dimly lit hallway. The air is cold.  
+To your LEFT: A faint blue light flickers.  
+To your RIGHT: You hear a distant whisper.  
+
+> go left  
+You step toward the blue light. The air grows colder.  
+
+To your LEFT: A wall covered in strange symbols.  
+To your RIGHT: A doorway, barely open.  
+
+> go right  
+You push the door open and step through.  
+
+You’ve escaped the hallway!
+
+
+
