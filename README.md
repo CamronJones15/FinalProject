@@ -293,5 +293,10 @@ You push the door open and step through.
 
 You’ve escaped the hallway!
 
+On the Map there are going to be certain parts to where a mini game/ escape room game will be played.
+if they mess up on the game they will restart on the game until they beat it.
+
+On the games they will be timed Depending on the difficulty on the game. 
+
 
 
