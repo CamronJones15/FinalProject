@@ -5,17 +5,21 @@ namespace StarterGame{
 
     public class PickUpCommand : Command {
 
-        private string item;
+        
 
-        public PickUpCommand (string item){
+        public PickUpCommand () : base(){
 
-            _item = item; 
+            this.Name = "pickup"; 
         }
 
         public void Execute(){
-
-            Console.WriteLine($"You picked up the{_item}.")
-            
+            if(this.HasSecondWord()){
+                player.PickUpItem(this.SecondWord);
+            }
+            else{
+                player.WarningMessage("\nPickup what?");
+            }
+            return false;
         }
     }
 

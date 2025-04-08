@@ -16,5 +16,9 @@ namespace StarterGame{
             _volume = volume;
             _weight = weight;
         }
+        @Override
+        public string ToString(){
+            return Name;
+        }
     }
 }

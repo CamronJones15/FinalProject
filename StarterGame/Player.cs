@@ -48,7 +48,7 @@ namespace StarterGame
             }
             Console.WriteLine($"Choose a weapon to attack {_enemy}:");
             for (int i = 0; i < weapons.Count; i++){
-                Console.WriteLine($"{i + 1}. {weapons[i].Name}");
+                NormalMessage($"{i + 1}. {weapons[i].Name}");
 
             }
 
@@ -58,14 +58,18 @@ namespace StarterGame
             if (int.TryParse(input, out int choice) && choice > 0 && choice <= weapons.Count)
             {
                 Item selectedWeapon = weapons[choice - 1];
-                Console.WriteLine($"You swing your {selectedWeapon.Name} at the {_enemy} and deal damage!");
+                NormalMessage($"You swing your {selectedWeapon.Name} at the {_enemy} and deal damage!");
             }
             else
             {
-                Console.WriteLine("Invalid choice! You hesitate and miss your attack.");
+                ErrorMessage("Invalid choice! You hesitate and miss your attack.");
             }
         }
 
+        public void PickUpItem(string item){
+            //have to figure how to parse the string into an item, maybe by using a dictionary where the key is the name of the item
+            
+        }
 
         public void OutputMessage(string message)
         {
