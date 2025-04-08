@@ -11,7 +11,7 @@ namespace StarterGame
     {
         private Room _currentRoom = null;
 
-        
+        private Dictionary<string, Item> _inventory = new Dictionary<string, Item>();
         public Room CurrentRoom { get { return _currentRoom; } set { _currentRoom = value; } }
 
         public Player(Room room)
@@ -68,7 +68,7 @@ namespace StarterGame
 
         public void PickUpItem(string item){
             //have to figure how to parse the string into an item, maybe by using a dictionary where the key is the name of the item
-            
+
         }
 
         public void OutputMessage(string message)

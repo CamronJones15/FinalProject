@@ -254,7 +254,12 @@ Inventory Command #
 To Do List -
 Camron 
 Create Rooms for Maze 
+
+- important agenda - 
+
 Implement Inventory to Player Class 
+Add ability for world events and triggers
+create TrapRoom class that inherits from room class
 
 Vanishing Phrase Room 
 
