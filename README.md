@@ -257,7 +257,7 @@ Create Rooms for Maze
 
 - important agenda - 
 
-Implement Inventory to Player Class 
+Implement Inventory to Player Class using a dictionary using a string as a key and contains items. 
 Add ability for world events and triggers
 create TrapRoom class that inherits from room class
 
