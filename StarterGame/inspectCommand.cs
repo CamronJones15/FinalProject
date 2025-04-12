@@ -4,19 +4,26 @@ using System.Collections.Generic;
 namespace StarterGame
 {
 
-public class InspectCommand : Command{
+    public class InspectCommand : Command{
 
-    private string _object;
 
-    public InspectCommand(string obj){
 
-        _object = obj
+        public InspectCommand() : base(){
+
+            this.Name = "Inspect";
+        }
+
+        public void Execute(Player player){
+            if (this.HasSecondWord())
+            {
+                player.InspectItem(SecondWord);
+            }
+            else
+            {
+                player.WarningMessage("\nInspect what?");
+            }
+        }
+
+
     }
-
-    public void Execute(){
-        Console.WriteLine($"You inspect the {_object} something seems odd....")
-    }
-
-
-}
 }

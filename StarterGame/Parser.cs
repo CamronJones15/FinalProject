@@ -28,7 +28,12 @@ namespace StarterGame
                 command = _commands.Get(words[0]);
                 if (command != null)
                 {
-                    if (words.Length > 1)
+                    if (words.Length > 2)
+                    {
+                        command.SecondWord = words[1];
+                        command.ThirdWord = words[2];
+                    }
+                    else if(words.Length > 1)
                     {
                         command.SecondWord = words[1];
                     }

@@ -33,7 +33,7 @@ namespace StarterGame
             }
         }
 
-        //added code from attack command into this method to ensure proper implementation of design pattern.
+        
         public void AttackThis(string _enemy){
             //method that takes a string of an enemy, and possibly an item name
             //method then checks to see if the enemy is present within the room and if that item is in the characters inventory
@@ -65,10 +65,42 @@ namespace StarterGame
                 ErrorMessage("Invalid choice! You hesitate and miss your attack.");
             }
         }
+        public void Dig(string _location)
+        {
+            if (_inventory.ContainsKey("Shovel"))
+            {
+                NormalMessage($"You dig at {_location} and uncover something hidden!");
+
+            }
+            else
+            {
+                ErrorMessage($"You try to dig at {_location}, but you need a shovel!");
+            }
+        }
 
         public void PickUpItem(string item){
             //have to figure how to parse the string into an item, maybe by using a dictionary where the key is the name of the item
 
+        }
+
+        public void InspectItem(string item)
+        {
+            if (_inventory.ContainsKey(item))
+            {
+                Item inspectedItem;
+                if(_inventory.TryGetValue(item, out inspectedItem))
+                {
+                    InfoMessage(inspectedItem.Inspect());
+                }
+                else
+                {
+                    WarningMessage("Error: Unable to inspect item");
+                }
+            }
+            else
+            {
+                WarningMessage("Item not in inventory");
+            }
         }
 
         public void OutputMessage(string message)

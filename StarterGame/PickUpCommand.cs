@@ -12,7 +12,7 @@ namespace StarterGame{
             this.Name = "pickup"; 
         }
 
-        public void Execute(){
+        public void Execute(Player player){
             if(this.HasSecondWord()){
                 player.PickUpItem(this.SecondWord);
             }

@@ -16,6 +16,10 @@ namespace StarterGame{
             _volume = volume;
             _weight = weight;
         }
+        public string Inspect()
+        {
+            return (this.Name + "\nvolume: " + this.Volume + "\nweight: " + this.Weight);
+        }
         @Override
         public string ToString(){
             return Name;

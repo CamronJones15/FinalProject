@@ -12,9 +12,14 @@ namespace StarterGame
         
         public bool Execute(Player player){
 
-            if(this.HasSecondWord()){
-                player.AttackThis(SecondWord); // method still needs implementation
-            }else{
+            if (this.HasSecondWord() && this.HasThirdWord()) {
+                player.AttackThis(SecondWord, ThirdWord);
+            }
+            else if(this.HasSecondWord())
+            {
+                player.WarningMessage("Attack " + SecondWord + " with what?");
+            }
+            else{
                 player.WarningMessage("Attack what?");
             }
             return false;

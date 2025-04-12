@@ -5,24 +5,21 @@ using StarterGame;
 namespace StarterGame
 {
     public class DigCommand : Command{
-        private string _location;
-        private Inventory _inventory;
 
-        public DigCommand(string location, Inventory){
-            _location = location;
-            _inventory = inventory;
-        }
-           public void Execute()
+        public DigCommand() : base()
         {
-            if (_inventory.HasItem("Shovel"))
+            this.Name = "dig";
+        }
+        public void Execute(Player player){
+            if (this.HasSecondWord())
             {
-                Console.WriteLine($"You dig at {_location} and uncover something hidden!");
-               
+                player.Dig(this.SecondWord);
             }
             else
             {
-                Console.WriteLine($"You try to dig at {_location}, but you need a shovel!");
+                player.WarningMessage("\nDig what?");
             }
+            retunr false;
         }
 
     }
