@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7WYCznF2El4=",
+  "dgSpecHash": "nI4Au92MatU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\chadj\\OneDrive\\Documents\\GitHub\\FinalProject\\StarterGame\\StarterGame.csproj",
+  "projectFilePath": "C:\\Users\\chadj\\OneDrive\\Documents\\GitHub\\FinalProject\\StarterGame\\StarterGame\\StarterGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\chadj\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.36\\microsoft.netcore.app.ref.6.0.36.nupkg.sha512",
     "C:\\Users\\chadj\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.36\\microsoft.windowsdesktop.app.ref.6.0.36.nupkg.sha512",

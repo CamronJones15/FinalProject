@@ -16,7 +16,7 @@ namespace StarterGame
 
         public void Execute(){
 
-            Console.WriteLine($"You have activated the {_object}")
+            Console.WriteLine($"You have activated the {_object}");
         }
 
     }

@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chadj\\OneDrive\\Documents\\GitHub\\FinalProject\\StarterGame\\StarterGame.csproj",
+      "projectUniqueName": "c:\\Users\\chadj\\OneDrive\\Documents\\GitHub\\FinalProject\\StarterGame\\StarterGame\\StarterGame.csproj",
       "projectName": "StarterGame",
-      "projectPath": "C:\\Users\\chadj\\OneDrive\\Documents\\GitHub\\FinalProject\\StarterGame\\StarterGame.csproj",
+      "projectPath": "c:\\Users\\chadj\\OneDrive\\Documents\\GitHub\\FinalProject\\StarterGame\\StarterGame\\StarterGame.csproj",
       "packagesPath": "C:\\Users\\chadj\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chadj\\OneDrive\\Documents\\GitHub\\FinalProject\\StarterGame\\obj\\",
+      "outputPath": "c:\\Users\\chadj\\OneDrive\\Documents\\GitHub\\FinalProject\\StarterGame\\StarterGame\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\chadj\\AppData\\Roaming\\NuGet\\NuGet.Config"

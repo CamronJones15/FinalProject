@@ -62,6 +62,8 @@ namespace StarterGame
             parkingDeck.SetExit("south", universityParking);
 
             return outside;
+
+            TrapRoom tr = new TrapRoom();
         }
 
         /**
@@ -115,6 +117,8 @@ namespace StarterGame
         {
             return "\nThank you for playing, Goodbye. \n";
         }
+
+
 
     }
 }
