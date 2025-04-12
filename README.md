@@ -261,6 +261,15 @@ Implement Inventory to Player Class using a dictionary using a string as a key a
 Add ability for world events and triggers
 create TrapRoom class that inherits from room class
 
+To Do List - 
+Fernando
+Started implementation of player inventory class, planning to include methods to that class such as GetWeapons
+further implemented Commands
+
+
+
+
+
 Vanishing Phrase Room 
 
 Vanishing Phrases are going to pop up with missing letters in a sentence. The Player has to guess the letters of the missing phrase then type in the whole phrase. 
