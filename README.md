@@ -313,4 +313,45 @@ if they mess up on the game they will restart on the game until they beat it.
 On the games they will be timed Depending on the difficulty on the game. 
 
 
-
+GAMEMAP                                                     |
+X = TRAP                                                    |
+$ = MINIGAME                                                |
+0 = GHOST/GAME INSTRUCTIONS                                 |
+                                                            |
+                                            X-----------------------0----$----------------X
+                                                   |                               |
+                                                   0                               |
+                                                   |                               |
+                                                   $                               0
+                                                   |                               |
+                                          X--------|--------X           X----------$-------X
+                                          |        |        |                      |
+                                          |        |        0                      |
+                                          |        X        |                      |
+                                          X                 $                      |
+                                                            |            $---0-----X-------X
+                                                            |            |
+                                                            |            |
+                                                   X--------|------X     |
+                                                            0            |
+                                                            |            |
+                                                            $            |
+                                                            |            |
+                                                            |            |
+                                                X-----------|-------X    |-------------X
+                                                            |            | 
+                                                            |            |
+                                                            |            |
+                                                            0            0
+                                                            |            |
+                                                            $            $
+                                                            |            |  
+                                   ------------------------- ------------ -----------------------                                      
+                                   |                                                            |
+                                   |                                                            |
+                                   |                                                            |
+                                   |                      FINAL BOSS GAME                       |
+                                   |                                                            | 
+                                   |                                                            |
+                                   |                                                            |
+                                   --------------------------------------------------------------
