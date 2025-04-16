@@ -4,7 +4,7 @@ using StarterGame;
 
 namespace StarterGame
 {
-    public class AcitvateCommand :Command{
+    public class AcitvateCommand : Command{
 
         private string _object;
 
