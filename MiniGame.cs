@@ -27,11 +27,11 @@ namespace StarterGame{
 
         switch(RoomName){
 
-            case "Starter Room:
+            case MiniGameType.Starter:
             manager.PlayStarterRoom();
             break;
 
-            case "Happy Birthday":
+            case MiniGameType.Birthday:
             manager.BirthdayRoom();
             break;
 
