@@ -22,10 +22,15 @@ namespace StarterGame{
         manager = minigameManager;
     }
 
-    public void EnterRoom(string RoomName){
-        Console.WriteLine($"You are now Entering..{RoomName} \n");
+    public void PlayMiniGame(MiniGameType type)
+{
+    if (completedMiniGames.Contains(type))
+    {
+        Console.WriteLine($"You've already completed the minigame in the {type}.");
+        return;
+    }
 
-        switch(RoomName){
+        switch(type){
 
             case MiniGameType.Starter:
             manager.PlayStarterRoom();

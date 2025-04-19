@@ -130,6 +130,69 @@ namespace StarterGame{
 
      }
 
+    private void PlayHallOfPortraits(){
+    Console.WriteLine("Reign whispers:\n\"Step lightly...\"");
+    Console.WriteLine("You’ve entered The Hall of Portraits — a place where time stands still...");
+    Console.WriteLine("…and the eyes of the past never stop watching.\n");
+
+    Console.WriteLine("As the door seals behind you, candlelight flickers to life, casting long shadows on the faces of ten painted souls.");
+    Console.WriteLine("Their eyes... follow.\n");
+
+    Console.WriteLine("At the far end of the hall, a locked door waits.");
+    Console.WriteLine("Beside it, a golden plaque reads:");
+    Console.WriteLine("\"Only the one who does not belong shall set you free.\"\n");
+
+    Console.WriteLine("Reign whispers again: \"Nine have their time… One does not belong.\"\n");
+
+    Console.WriteLine("The 10 Portraits:");
+    Console.WriteLine("1. The Noblewoman (1682)");
+    Console.WriteLine("2. The Soldier (1805)");
+    Console.WriteLine("3. The Twins (1901)");
+    Console.WriteLine("4. The Scholar (1750)");
+    Console.WriteLine("5. The Widow (1857)");
+    Console.WriteLine("6. The Merchant (1603)");
+    Console.WriteLine("7. The Jester (1400s)");
+    Console.WriteLine("8. The Farmer (1720)");
+    Console.WriteLine("9. The Duchess (1660)");
+    Console.WriteLine("10. The Stranger (Unknown Date)\n");
+
+    int attempts = 3;
+    string correctAnswer = "The Stranger";
+
+    while (attempts > 0)
+    {
+        Console.WriteLine($"Puzzle Prompt: Which portrait does not belong? ({attempts} attempts left)");
+        Console.WriteLine("Type the name exactly (e.g., \"The Jester\"):");
+        string guess = Console.ReadLine().Trim();
+
+        if (guess.Equals(correctAnswer, StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("\nYou speak the name aloud... and silence follows.");
+            Console.WriteLine("A click. The locked door creaks open.");
+            Console.WriteLine("\nReign whispers:");
+            Console.WriteLine("\"Very good... you see through the lies of time. The Stranger was never one of us.\"");
+            Console.WriteLine("\"Proceed — but know the eyes never truly stop watching.\"\n");
+            return;
+        }
+        else
+        {
+            attempts--;
+            if (attempts > 0)
+            {
+                Console.WriteLine($"\nReign hisses from the shadows...");
+                Console.WriteLine($"\"Wrong answer... {attempts} attempt{(attempts == 1 ? "" : "s")} remain. Choose carefully.\"\n");
+            }
+            else
+            {
+                Console.WriteLine("\nSuddenly, every portrait’s mouth opens in a silent scream.");
+                Console.WriteLine("The candles extinguish all at once.");
+                Console.WriteLine("\nGAME OVER.");
+                Console.WriteLine("Restarting Hall of Portraits...\n");
+            }
+        }
+    }
+}
+
 
     }
 }
