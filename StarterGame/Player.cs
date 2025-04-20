@@ -83,23 +83,34 @@ namespace StarterGame
 
         }
 
-        public void InspectItem(string item)
+        public void InspectItem(string itemName)
         {
-            if (_inventory.ContainsKey(item))
-            {
-                Item inspectedItem;
-                if(_inventory.TryGetValue(item, out inspectedItem))
-                {
-                    InfoMessage(inspectedItem.Inspect());
-                }
-                else
-                {
-                    WarningMessage("Error: Unable to inspect item");
-                }
-            }
-            else
-            {
-                WarningMessage("Item not in inventory");
+            // if (_inventory.ContainsKey(item))
+            // {
+            //     Item inspectedItem;
+            //     if(_inventory.TryGetValue(item, out inspectedItem))
+            //     {
+            //         InfoMessage(inspectedItem.Inspect());
+            //     }
+            //     else
+            //     {
+            //         WarningMessage("Error: Unable to inspect item");
+            //     }
+            // }
+            // else
+            // {
+            //     WarningMessage("Item not in inventory");
+            // }
+
+            InspectItem itemToInspect = CurrentRoom.Pickup(itemName);
+            if(itemToInspect != null){
+                InfoMessage(itemName + " is " +
+                itemToInspect.Description);
+                CurrentRoom.Drop(itemToInspect);
+
+            }else{
+                WarningMessage("There is no item named " +
+                itemName + " in the room.");
             }
         }
 

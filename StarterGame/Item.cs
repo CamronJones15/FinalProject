@@ -1,5 +1,5 @@
 namespace StarterGame{
-    public class Item{
+    public class Item : IItem{
         private string _name;
         private float _volume;
 
@@ -11,18 +11,21 @@ namespace StarterGame{
 
         public float Weight{get{return _weight;} set{ _weight = value;} }
 
+        public Item() : this("NoName"){}
+
+        public Item(string name) : this(name, 1) {}
         public Item(string name, float volume, float weight){
             _name = name;
             _volume = volume;
             _weight = weight;
         }
-        public string Inspect()
+        public string Description()
         {
-            return (this.Name + "\nvolume: " + this.Volume + "\nweight: " + this.Weight);
+            return ToString();
         }
         @Override
         public string ToString(){
-            return Name;
+            return (this.Name + "\nvolume: " + this.Volume + "\nweight: " + this.Weight);
         }
     }
 }

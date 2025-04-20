@@ -45,10 +45,23 @@ namespace StarterGame
 
             return exitNames;
         }
-
+        public IItem Pickup(string itemName){
+            IItem tempItem = null;
+            if(_floor != null){
+                if(_floor.Name.Equals(itemName)){
+                    tempItem = _floor;
+                    _floor = null;
+                    return tempItem;
+                }
+            }
+            return tempItem;
+        }
+        public void Drop(IItem item){
+            _floor = item;
+        }
         public string Description()
         {
-            return "You are " + this.Tag + ".\n *** " + this.GetExits();
+            return "You are " + this.Tag + ".\n *** " + this.GetExits() + "\nFloor: " + (_floor==null?"empty":_floor.Name);
         }
     }
 }

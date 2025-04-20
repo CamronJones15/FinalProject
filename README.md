@@ -266,6 +266,8 @@ Fernando
 Started implementation of player inventory class, planning to include methods to that class such as GetWeapons
 further implemented Commands
 
+Fernando
+Add rest of mini game rooms into minigame manager
 
 
 
