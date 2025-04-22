@@ -4,39 +4,41 @@ using System.Collections.Generic;
 namespace StarterGame{
 
     public class MiniGameManager{
-
-        public MiniGameManager(){}
+        Player player;
+        public MiniGameManager(Player _player){
+            player = _player;
+        }
 
         public void PlayStarterRoom(){
-            Console.WriteLine("John: Ah, you're finally here.");
-            Console.WriteLine("Welcome to the Beginning — or is it the end? Hard to tell in a place like this.");
-            Console.WriteLine("This room is safe... for now. Look around. Take what you can. Trust what you must.");
-            Console.WriteLine("Every room ahead holds a truth, a test, and maybe a little terror.");
-            Console.WriteLine("You're 21 now, aren't you? A good age to learn what fear really feels like.");
-            Console.WriteLine("Light the candles… or don’t. The escape begins when you decide it does.");
-            Console.WriteLine("Good luck, birthday soul. You’ll need it.");
+            player.NormalMessage("John: Ah, you're finally here.");
+            player.NormalMessage("Welcome to the Beginning — or is it the end? Hard to tell in a place like this.");
+            player.NormalMessage("This room is safe... for now. Look around. Take what you can. Trust what you must.");
+            player.NormalMessage("Every room ahead holds a truth, a test, and maybe a little terror.");
+            player.NormalMessage("You're 21 now, aren't you? A good age to learn what fear really feels like.");
+            player.NormalMessage("Light the candles… or don’t. The escape begins when you decide it does.");
+            player.NormalMessage("Good luck, birthday soul. You’ll need it.");
         }
 
         public void PlayBirthdayRoom(){
             Console.Clear();
-            Console.WriteLine("John");
-            Console.WriteLine("Happy Birthday, dear friend...");
-            Console.WriteLine("You’re finally 21. A beautiful age — old enough to celebrate, young enough to make mistakes.");
-            Console.WriteLine("And perhaps... one of them was walking into this room.");
-            Console.WriteLine("Do you like cake?");
-            Console.WriteLine("There's one waiting just for you.");
-            Console.WriteLine("Candles flicker, time ticks, and the door... well, it’s locked.");
-            Console.WriteLine("Maybe... just maybe... if you blow out the candles, you’ll find your way out.");
-            Console.WriteLine("Or maybe you'll... stay here with me... forever. ");
-            Console.WriteLine("Instructions:");
-            Console.WriteLine("Blow out the candles to reveal a secret code.");
-            Console.WriteLine("You’ll need that code — in the correct order — to unlock the door.");
-            Console.WriteLine("If you choose not to blow them out... well, your time might run out faster than you think.");
-            
-            Console.WriteLine("Do you want to blow the candles out? [yes/no]")
+            player.NormalMessage("John");
+            player.NormalMessage("Happy Birthday, dear friend...");
+            player.NormalMessage("You’re finally 21. A beautiful age — old enough to celebrate, young enough to make mistakes.");
+            player.NormalMessage("And perhaps... one of them was walking into this room.");
+            player.NormalMessage("Do you like cake?");
+            player.NormalMessage("There's one waiting just for you.");
+            player.NormalMessage("Candles flicker, time ticks, and the door... well, it’s locked.");
+            player.NormalMessage("Maybe... just maybe... if you blow out the candles, you’ll find your way out.");
+            player.NormalMessage("Or maybe you'll... stay here with me... forever. ");
+            player.InfoMessage("Instructions:");
+            player.InfoMessage("Blow out the candles to reveal a secret code.");
+            player.InfoMessage("You’ll need that code — in the correct order — to unlock the door.");
+            player.InfoMessage("If you choose not to blow them out... well, your time might run out faster than you think.");
+
+            player.WarningMessage("Do you want to blow the candles out? [yes/no]");
             string input = Console.WriteLine()?.tolower();
 
-            if(input == yes){
+            if(input == "yes"){
                 string reversedCode = "08217";
                 Console.WriteLine("\n The Candles go out.... On the Cake an Code appears");
                 Console.WriteLine("->" + reversedCode);
@@ -44,21 +46,21 @@ namespace StarterGame{
                 Console.WriteLine("\nEnter the code in the correct order to unlock the door.");
                 Console.WriteLine("Hint: Sometimes... the truth is revealed in reverse.");
 
-                string correctCode = "17820"
+                string correctCode = "17820";
                 int timeLeft = 15;
 
                 while(timeLeft > 0){
-                    Console.WriteLine($"\n Time Left.. {timeLeft} Seconds")
-                    Console.Write("Enter the Code...")
+                    Console.WriteLine($"\n Time Left.. {timeLeft} Seconds");
+                    Console.Write("Enter the Code...");
                     string attempt = Console.ReadLine();
 
                     if(attempt = correctCode){
-                        Console.WriteLine("Congrats!! You have escaped the room!!")
+                        Console.WriteLine("Congrats!! You have escaped the room!!");
                         return;
                     }
                     timeLeft -= 5;
                     if(timeLeft > 0){
-                        Console.WriteLine("Wrong Code!! Try Again..")
+                        Console.WriteLine("Wrong Code!! Try Again..");
                     }
                       Console.WriteLine("\nBOOM! The candles weren't just candles...");
                       Console.WriteLine("Game Over. Restarting...");
@@ -93,7 +95,7 @@ namespace StarterGame{
             Console.WriteLine("A small pond in the far corner, where koi fish drift lazily in slow circles.");
             Console.WriteLine("The air is thick with silence.\n");
 
-            Console.WriteLine("Do you want to dig up the patch of lilies? [yes/no]")
+            Console.WriteLine("Do you want to dig up the patch of lilies? [yes/no]");
             string digChoice = Console.ReadLine().Trim().lower();
 
             if(digChoice == yes){

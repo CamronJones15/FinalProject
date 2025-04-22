@@ -9,21 +9,24 @@ namespace StarterGame{
 
         public float Volume{get{return _volume;} set{ _volume = value;} }
 
-        public float Weight{get{return _weight;} set{ _weight = value;} }
+        public virtual float Weight{get{return _weight+(_decorator == null?0:_decorator.Weight);} set{ _weight = value;} }
 
         public Item() : this("NoName"){}
-
+        private IItem _decorator;
+        public IItem Decorator { get { return _decorator; } set { _decorator = value; } }
+        public virtual bool IsContainer { get { return false; } }
         public Item(string name) : this(name, 1) {}
-        public Item(string name, float volume, float weight){
+        public Item(string name, float weight){
             _name = name;
-            _volume = volume;
             _weight = weight;
         }
-        public string Description()
+        
+        public virtual string Description
         {
-            return ToString();
+             get{ return ToString(); } 
         }
-        @Override
+
+        override
         public string ToString(){
             return (this.Name + "\nvolume: " + this.Volume + "\nweight: " + this.Weight);
         }

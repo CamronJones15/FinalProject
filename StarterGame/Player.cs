@@ -34,13 +34,11 @@ namespace StarterGame
         }
 
         
-        public void AttackThis(string _enemy){
-            //method that takes a string of an enemy, and possibly an item name
-            //method then checks to see if the enemy is present within the room and if that item is in the characters inventory
-            //if the item doesn't exist in the inventory then output an error message using the error message method
+        public void AttackThis(string _enemy, string itemName){
+            
 
             
-            List<Item> weapons = _inventory.GetWeapons();
+            List<Item> weapons = _inventory.GetWeapons(); //G
             if(weapons.Count == 0)
             {
                 Console.WriteLine($"You cannot attack {_enemy} with no weapons!!");

@@ -10,6 +10,7 @@ namespace StarterGame
         {
             this.Name = "dig";
         }
+        override
         public void Execute(Player player){
             if (this.HasSecondWord())
             {
@@ -19,7 +20,7 @@ namespace StarterGame
             {
                 player.WarningMessage("\nDig what?");
             }
-            retunr false;
+            
         }
 
     }

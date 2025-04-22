@@ -7,9 +7,15 @@ namespace StarterGame
     public class AttackCommand : Command{
 
         private string _enemy;
-        private Inventory _inventory;
+        private CommandWords _words;
 
-        
+        public AttackCommand() : this(new CommandWords()) { }
+
+        public AttackCommand(CommandWords commands) : base()
+        {
+            _words = commands;
+            this.Name = "attack";
+        }
         public bool Execute(Player player){
 
             if (this.HasSecondWord() && this.HasThirdWord()) {

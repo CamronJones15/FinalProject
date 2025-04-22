@@ -9,8 +9,17 @@ namespace StarterGame{
 
     public interface IItem{
         string Name { get; set;}
-        float Weight{get;set;}
+        float Weight { get; set; }
         string Description{get;}
+        void Decorate(IItem decorator);
+    }
+
+    public interface IItemContainer : IItem
+    {
+        bool Insert(IItem item);
+
+        IItem Remove(string itemName);
+
     }
 
 }

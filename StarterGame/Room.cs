@@ -11,6 +11,7 @@ namespace StarterGame
     {
         private Dictionary<string, Room> _exits;
         private string _tag;
+        private IItem _floor;
         public string Tag { get { return _tag; } set { _tag = value; } }
 
         public Room() : this("No Tag"){}
