@@ -1,5 +1,0 @@
-c:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\StarterGame\obj\Debug\net6.0\StarterGame.GeneratedMSBuildEditorConfig.editorconfig
-c:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\StarterGame\obj\Debug\net6.0\StarterGame.AssemblyInfoInputs.cache
-c:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\StarterGame\obj\Debug\net6.0\StarterGame.AssemblyInfo.cs
-c:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\StarterGame\obj\Debug\net6.0\StarterGame.csproj.CoreCompileInputs.cache
-c:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\StarterGame\obj\Debug\net6.0\StarterGame.sourcelink.json

@@ -20,3 +20,11 @@ C:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\obj\Debug\net6
 C:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.dll
 C:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\obj\Debug\net6.0\refint\StarterGame.dll
 C:\Users\chadj\OneDrive\Documents\GitHub\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.pdb
+C:\Users\slxnt\GitHub Repos\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\slxnt\GitHub Repos\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.AssemblyInfoInputs.cache
+C:\Users\slxnt\GitHub Repos\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.AssemblyInfo.cs
+C:\Users\slxnt\GitHub Repos\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.csproj.CoreCompileInputs.cache
+C:\Users\slxnt\GitHub Repos\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.sourcelink.json
+C:\Users\slxnt\GitHub Repos\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.dll
+C:\Users\slxnt\GitHub Repos\FinalProject\StarterGame\obj\Debug\net6.0\refint\StarterGame.dll
+C:\Users\slxnt\GitHub Repos\FinalProject\StarterGame\obj\Debug\net6.0\StarterGame.pdb
