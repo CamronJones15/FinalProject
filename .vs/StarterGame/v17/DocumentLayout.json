@@ -54,23 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HelpCommand.cs",
-              "DocumentMoniker": "C:\\Users\\slxnt\\GitHub Repos\\FinalProject\\StarterGame\\HelpCommand.cs",
-              "RelativeDocumentMoniker": "StarterGame\\HelpCommand.cs",
-              "ToolTip": "C:\\Users\\slxnt\\GitHub Repos\\FinalProject\\StarterGame\\HelpCommand.cs",
-              "RelativeToolTip": "StarterGame\\HelpCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-22T14:37:47.844Z"
             },
             {
               "$type": "Document",
@@ -104,10 +92,22 @@
               "RelativeDocumentMoniker": "StarterGame\\Player.cs",
               "ToolTip": "C:\\Users\\slxnt\\GitHub Repos\\FinalProject\\StarterGame\\Player.cs",
               "RelativeToolTip": "StarterGame\\Player.cs",
-              "ViewState": "AgIAAJQAAAAAAAAAAAAAACUAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAJQAAAAAAAAAAAAAAJQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-22T13:34:58.853Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HelpCommand.cs",
+              "DocumentMoniker": "C:\\Users\\slxnt\\GitHub Repos\\FinalProject\\StarterGame\\HelpCommand.cs",
+              "RelativeDocumentMoniker": "StarterGame\\HelpCommand.cs",
+              "ToolTip": "C:\\Users\\slxnt\\GitHub Repos\\FinalProject\\StarterGame\\HelpCommand.cs",
+              "RelativeToolTip": "StarterGame\\HelpCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-22T14:37:47.844Z"
             },
             {
               "$type": "Document",
