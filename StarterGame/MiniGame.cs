@@ -64,7 +64,7 @@ namespace StarterGame{
                     break;
 
                 default:
-                    Console.WriteLine("Unknown GameRoom?")
+                    Console.WriteLine("Unknown GameRoom?");
                     break;
 
             }

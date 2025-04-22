@@ -10,7 +10,7 @@ namespace StarterGame{
         public float Volume{get{return _volume;} set{ _volume = value;} }
 
         public virtual float Weight{get{return _weight+(_decorator == null?0:_decorator.Weight);} set{ _weight = value;} }
-
+        //needs Decorate function that takes an item still need to research this
         public Item() : this("NoName"){}
         private IItem _decorator;
         public IItem Decorator { get { return _decorator; } set { _decorator = value; } }

@@ -63,7 +63,7 @@ namespace StarterGame
 
             return outside;
 
-            TrapRoom tr = new TrapRoom();
+            
         }
 
         /**

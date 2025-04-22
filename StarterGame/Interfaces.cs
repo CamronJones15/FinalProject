@@ -11,7 +11,7 @@ namespace StarterGame{
         string Name { get; set;}
         float Weight { get; set; }
         string Description{get;}
-        void Decorate(IItem decorator);
+        //void Decorate(IItem decorator); commented out temporarily
     }
 
     public interface IItemContainer : IItem

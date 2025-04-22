@@ -11,7 +11,7 @@ namespace StarterGame
             this.Name = "dig";
         }
         override
-        public void Execute(Player player){
+        public bool Execute(Player player){
             if (this.HasSecondWord())
             {
                 player.Dig(this.SecondWord);
@@ -20,7 +20,7 @@ namespace StarterGame
             {
                 player.WarningMessage("\nDig what?");
             }
-            
+            return false;
         }
 
     }

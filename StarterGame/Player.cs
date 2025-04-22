@@ -33,36 +33,35 @@ namespace StarterGame
             }
         }
 
-        
-        public void AttackThis(string _enemy, string itemName){
+        // Commented this out, needs to be redone
+        //public void AttackThis(string _enemy, string itemName){
             
 
             
-            List<Item> weapons = _inventory.GetWeapons(); //G
-            if(weapons.Count == 0)
-            {
-                Console.WriteLine($"You cannot attack {_enemy} with no weapons!!");
-                return;
-            }
-            Console.WriteLine($"Choose a weapon to attack {_enemy}:");
-            for (int i = 0; i < weapons.Count; i++){
-                NormalMessage($"{i + 1}. {weapons[i].Name}");
+        //    if(weapons.Count == 0)
+        //    {
+        //        Console.WriteLine($"You cannot attack {_enemy} with no weapons!!");
+        //        return;
+        //    }
+        //    Console.WriteLine($"Choose a weapon to attack {_enemy}:");
+        //    for (int i = 0; i < weapons.Count; i++){
+        //        NormalMessage($"{i + 1}. {weapons[i].Name}");
 
-            }
+        //    }
 
-            Console.Write("Enter the number of your choice:");
-            string input = Console.ReadLine();
+        //    Console.Write("Enter the number of your choice:");
+        //    string input = Console.ReadLine();
 
-            if (int.TryParse(input, out int choice) && choice > 0 && choice <= weapons.Count)
-            {
-                Item selectedWeapon = weapons[choice - 1];
-                NormalMessage($"You swing your {selectedWeapon.Name} at the {_enemy} and deal damage!");
-            }
-            else
-            {
-                ErrorMessage("Invalid choice! You hesitate and miss your attack.");
-            }
-        }
+        //    if (int.TryParse(input, out int choice) && choice > 0 && choice <= weapons.Count)
+        //    {
+        //        Item selectedWeapon = weapons[choice - 1];
+        //        NormalMessage($"You swing your {selectedWeapon.Name} at the {_enemy} and deal damage!");
+        //    }
+        //    else
+        //    {
+        //        ErrorMessage("Invalid choice! You hesitate and miss your attack.");
+        //    }
+        //}
         public void Dig(string _location)
         {
             if (_inventory.ContainsKey("Shovel"))
@@ -100,7 +99,7 @@ namespace StarterGame
             //     WarningMessage("Item not in inventory");
             // }
 
-            InspectItem itemToInspect = CurrentRoom.Pickup(itemName);
+            IItem itemToInspect = CurrentRoom.Pickup(itemName);
             if(itemToInspect != null){
                 InfoMessage(itemName + " is " +
                 itemToInspect.Description);

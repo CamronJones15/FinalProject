@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -54,7 +55,7 @@ namespace StarterGame{
                     Console.Write("Enter the Code...");
                     string attempt = Console.ReadLine();
 
-                    if(attempt = correctCode){
+                    if(attempt = correctCode){ //trying to convert a string to a booleon variable
                         Console.WriteLine("Congrats!! You have escaped the room!!");
                         return;
                     }
@@ -76,13 +77,13 @@ namespace StarterGame{
 
         public void PlayGreenhouseRoom(){
             Console.WriteLine("John");
-            Console.WrtieLine("Ah... welcome to the Greenhouse.");
+            Console.WriteLine("Ah... welcome to the Greenhouse.");
             Console.WriteLine("A place where life thrives...");
             Console.WriteLine("And yet, nothing here breathes.");
             Console.WriteLine("The door slams shut behind you. The outside world fades.");
             Console.WriteLine("The grass beneath you cushions your step.");
             Console.WriteLine("The fountain trickles... not with rhythm, but with warning.");
-            Console.WritesLine("You notice them, don’t you?");
+            Console.WriteLine("You notice them, don’t you?");
             Console.WriteLine("The lilies… like the one you saw before.");
             Console.WriteLine("That was no accident. This is no coincidence.");
             Console.WriteLine("Something waits beneath.");
@@ -98,7 +99,7 @@ namespace StarterGame{
             Console.WriteLine("Do you want to dig up the patch of lilies? [yes/no]");
             string digChoice = Console.ReadLine().Trim().lower();
 
-            if(digChoice == yes){
+            if(digChoice == "yes"){
                 Console.WriteLine("\nYou kneel beside the lilies — they don't resist your touch.");
                 Console.WriteLine("As your hands dig into the dirt, the soil parts too easily.");
                 Console.WriteLine("Beneath the surface, something hard... cold... metal.");
@@ -114,7 +115,7 @@ namespace StarterGame{
                 Console.WriteLine("Use the magnetic fishing pole on the pond? (yes/no)");
                 string fishChoice = Console.ReadLine().Trim().ToLower();
 
-                if(fishChoice == yes){
+                if(fishChoice == "yes"){
                     Console.WriteLine("\nYou lower the magnet into the pond.");
                     Console.WriteLine("It glides past koi, past silt... and then — clink.");
                     Console.WriteLine("The pole jerks. You pull it up.");
@@ -126,7 +127,7 @@ namespace StarterGame{
                 }
                 else{
                     Console.WriteLine("You decide not to use the pole right now.\n");
-                }
+                } // an else line after another else line?
                 else{
                     Console.WriteLine("You leave the lilies undisturbed. Perhaps another clue awaits elsewhere.\n");
                 }
