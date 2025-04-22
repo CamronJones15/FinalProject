@@ -20,7 +20,7 @@ namespace StarterGame
             if (this.HasSecondWord())
             {
                 player.WaltTo(this.SecondWord);
-                player.TrackPath(this.SecondWord);
+                
             }
             else
             {

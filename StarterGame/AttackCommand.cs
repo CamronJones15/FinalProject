@@ -16,6 +16,7 @@ namespace StarterGame
             _words = commands;
             this.Name = "attack";
         }
+        override
         public bool Execute(Player player){
 
             if (this.HasSecondWord() && this.HasThirdWord()) {
