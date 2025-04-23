@@ -20,7 +20,7 @@ namespace StarterGame
         public bool Execute(Player player){
 
             if (this.HasSecondWord() && this.HasThirdWord()) {
-                player.AttackThis(SecondWord, ThirdWord);
+                //player.AttackThis(SecondWord, ThirdWord);
             }
             else if(this.HasSecondWord())
             {

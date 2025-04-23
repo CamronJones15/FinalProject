@@ -37,17 +37,17 @@ namespace StarterGame{
             player.InfoMessage("If you choose not to blow them out... well, your time might run out faster than you think.");
 
             player.WarningMessage("Do you want to blow the candles out? [yes/no]");
-            string input = Console.WriteLine()?.tolower();
+            string input = Console.ReadLine().ToLower();
 
             if(input == "yes"){
-                string reversedCode = "08217";
+                string reversedCode = "08217"; 
                 Console.WriteLine("\n The Candles go out.... On the Cake an Code appears");
                 Console.WriteLine("->" + reversedCode);
 
                 Console.WriteLine("\nEnter the code in the correct order to unlock the door.");
                 Console.WriteLine("Hint: Sometimes... the truth is revealed in reverse.");
 
-                string correctCode = "17820";
+                string correctCode = "17820";  // This code isn't the reversal of original code
                 int timeLeft = 15;
 
                 while(timeLeft > 0){
@@ -55,23 +55,25 @@ namespace StarterGame{
                     Console.Write("Enter the Code...");
                     string attempt = Console.ReadLine();
 
-                    if(attempt = correctCode){ //trying to convert a string to a booleon variable
-                        Console.WriteLine("Congrats!! You have escaped the room!!");
+                    if(attempt.Equals(correctCode)){
+                        player.InfoMessage("Congrats!! You have escaped the room!!");
                         return;
                     }
                     timeLeft -= 5;
                     if(timeLeft > 0){
                         Console.WriteLine("Wrong Code!! Try Again..");
                     }
-                      Console.WriteLine("\nBOOM! The candles weren't just candles...");
-                      Console.WriteLine("Game Over. Restarting...");
-                }
-                else{
-                    Console.WriteLine("\nThe candles flicker... and time ticks down...");
-                    Console.WriteLine("The room explodes in a burst of confetti and flame.");
-                    Console.WriteLine("Game Over.");
+                    else
+                    {
+                        Console.WriteLine("\nThe candles flicker... and time ticks down...");
+                        Console.WriteLine("The room explodes in a burst of confetti and flame.");
+                        Console.WriteLine("Game Over.");
 
+                    }
+                    player.WarningMessage("\nBOOM! The candles weren't just candles...");
+                    player.WarningMessage("Game Over. Restarting...");
                 }
+                
             }
         }
 
@@ -97,7 +99,7 @@ namespace StarterGame{
             Console.WriteLine("The air is thick with silence.\n");
 
             Console.WriteLine("Do you want to dig up the patch of lilies? [yes/no]");
-            string digChoice = Console.ReadLine().Trim().lower();
+            string digChoice = Console.ReadLine().Trim().ToLower();
 
             if(digChoice == "yes"){
                 Console.WriteLine("\nYou kneel beside the lilies — they don't resist your touch.");
@@ -115,7 +117,7 @@ namespace StarterGame{
                 Console.WriteLine("Use the magnetic fishing pole on the pond? (yes/no)");
                 string fishChoice = Console.ReadLine().Trim().ToLower();
 
-                if(fishChoice == "yes"){
+                if(fishChoice.Equals("yes")){
                     Console.WriteLine("\nYou lower the magnet into the pond.");
                     Console.WriteLine("It glides past koi, past silt... and then — clink.");
                     Console.WriteLine("The pole jerks. You pull it up.");
@@ -125,9 +127,9 @@ namespace StarterGame{
                     Console.WriteLine("\"It’s not the water that hides things... it’s the stillness.");
                     Console.WriteLine("Take the key. The door to the next room waits.\"\n");
                 }
-                else{
+                else if(fishChoice.Equals("no")){
                     Console.WriteLine("You decide not to use the pole right now.\n");
-                } // an else line after another else line?
+                }
                 else{
                     Console.WriteLine("You leave the lilies undisturbed. Perhaps another clue awaits elsewhere.\n");
                 }
