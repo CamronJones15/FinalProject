@@ -13,8 +13,6 @@ namespace StarterGame{
         }
         override
         public bool Execute(Player player){
-            IItem item = player.CurrentRoom._floor.Remove(SecondWord);
-            player._inventory.Insert(item);
             if(this.HasSecondWord()){
                 player.DropItem(this.SecondWord);
             }
