@@ -3,23 +3,23 @@ using System.Collections.Generic;
 
 namespace StarterGame{
 
-    public class PickUpCommand : Command {
+    public class DropCommand : Command {
 
         
 
-        public PickUpCommand () : base(){
+        public DropCommand () : base(){
 
-            this.Name = "pickup"; 
+            this.Name = "Drop"; 
         }
         override
         public bool Execute(Player player){
             IItem item = player.CurrentRoom._floor.Remove(SecondWord);
             player._inventory.Insert(item);
             if(this.HasSecondWord()){
-                player.PickUpItem(this.SecondWord);
+                player.DropItem(this.SecondWord);
             }
             else{
-                player.WarningMessage("\nPickup what?");
+                player.WarningMessage("\nDrop what?");
             }
             return false;
         }
