@@ -26,7 +26,7 @@ namespace StarterGame
             {
                 if(player != null)
                 {
-                    if(player.CurrentRoom == mainroom)
+                    if(player.CurrentRoom == Entrance)
                     {
                         player.ErrorMessage("Player is back at the entrance");
                     }if(player.CurrentRoom == Exit)
