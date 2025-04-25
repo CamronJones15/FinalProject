@@ -8,6 +8,8 @@ namespace StarterGame
 {
     class GameWorld
     {
+        private Room Entrance;
+        private Room Exit;
         private Dictionary<Trigger, IWorldEvent> _events;
 
         private GameWorld()
@@ -24,7 +26,7 @@ namespace StarterGame
             {
                 if(player != null)
                 {
-                    if(player.CurrentRoom == Entrance)
+                    if(player.CurrentRoom == mainroom)
                     {
                         player.ErrorMessage("Player is back at the entrance");
                     }if(player.CurrentRoom == Exit)
@@ -46,10 +48,28 @@ namespace StarterGame
             // create rooms
             Room mainroom = new Room("the main entrance to the labrynth");
             Room intersection1 = new Room("an intersection in the labrynth");
+            Room bossRoom = new Room("an arena where the minotaur sits");
+            //Room hbd = new Room("describe room");
 
             //set exits
             mainroom.SetExit("South", intersection1);
-            
+
+            //setup delegates
+            //MiniGame minigame1 = new MiniGame();
+            //minigame1.Engaged = true;
+            //hbd.Delegate = minigame1;
+
+
+            //create a chest
+            IItemContainer chest = new ItemContainer("chest", 0.25f);
+            IItem item1 = new Item("Flashlight", 0.2f);
+            chest.Insert(item1);
+            item1 = new Item("Cookie", 0.1f);
+            chest.Insert(item1);
+            mainroom.Drop(chest);
+
+            Entrance = mainroom;
+            Exit = bossRoom;
         }
     }
 }
