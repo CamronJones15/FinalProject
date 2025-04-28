@@ -9,10 +9,25 @@ namespace StarterGame
 {
     class GameWorld
     {
-        private Room Entrance;
-        private Room Exit;
+        private static GameWorld _instance;
+
+        public static GameWorld Instance
+        {
+            get
+            {
+                if(_instance == null)
+                {
+                    _instance = new GameWorld();
+                }
+                return _instance;
+            }
+        }
+
+        public Room Entrance;
+        public Room Exit;
         private Dictionary<Trigger, IWorldEvent> _events;
 
+       
         private GameWorld()
         {
             _events = new Dictionary<Trigger, IWorldEvent>();
@@ -44,7 +59,7 @@ namespace StarterGame
             }
         }
 
-        public void CreateWorld()
+        private void CreateWorld()
         {
             // create rooms
             Room mainroom = new Room("the main entrance to the labrynth");

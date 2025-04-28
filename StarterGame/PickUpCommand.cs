@@ -13,10 +13,8 @@ namespace StarterGame{
         }
         override
         public bool Execute(Player player){
-            IItem item = player.CurrentRoom._floor.Remove(SecondWord);
-            player._inventory.Insert(item);
             if(this.HasSecondWord()){
-                player.PickUpItem(this.SecondWord);
+                player.PickUp(this.SecondWord);
             }
             else{
                 player.WarningMessage("\nPickup what?");
