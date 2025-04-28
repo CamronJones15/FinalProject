@@ -16,58 +16,58 @@ namespace StarterGame{
 
     public class Minigame{
         
-        public Minigame(MiniGameManager minigameManager)
-        {
-            MiniGameManager manager = minigameManager;
-        }
+        //public Minigame(MiniGameManager minigameManager)
+        //{
+        //    MiniGameManager manager = minigameManager;
+        //}
 
-        public void PlayMiniGame(MiniGameType type)
-        {
-            if (completedMiniGames.Contains(type))
-            {
-                Console.WriteLine($"You've already completed the minigame in the {type}.");
-                return;
-            }
+        //public void PlayMiniGame(MiniGameType type)
+        //{
+        //    if (completedMiniGames.Contains(type))
+        //    {
+        //        Console.WriteLine($"You've already completed the minigame in the {type}.");
+        //        return;
+        //    }
 
-            switch(type){
+        //    switch(type){
 
-                case MiniGameType.Starter:
-                    manager.PlayStarterRoom();
-                    break;
+        //        case MiniGameType.Starter:
+        //            manager.PlayStarterRoom();
+        //            break;
 
-                case MiniGameType.Birthday:
-                    manager.PlayBirthdayRoom();
-                    break;
+        //        case MiniGameType.Birthday:
+        //            manager.PlayBirthdayRoom();
+        //            break;
 
-                case MiniGameType.Greenhouse:
-                    manager.PlayGreenhouseRoom();
-                    break;
+        //        case MiniGameType.Greenhouse:
+        //            manager.PlayGreenhouseRoom();
+        //            break;
 
-                case MiniGameType.Portraits:
-                    manager.PlayHallOfPortraits();
-                    break;
+        //        case MiniGameType.Portraits:
+        //            manager.PlayHallOfPortraits();
+        //            break;
 
-                case MiniGameType.Theater:
-                    manager.PlayTheaterRoom();
-                    break;
+        //        case MiniGameType.Theater:
+        //            manager.PlayTheaterRoom();
+        //            break;
 
-                case MiniGameType.Vanishing:
-                    manager.PlayerVanishingRoom();
-                    break;
+        //        case MiniGameType.Vanishing:
+        //            manager.PlayerVanishingRoom();
+        //            break;
 
-                case MiniGameType.Endless: 
-                    manager.PlayerEndlessRoom();
-                    break;
+        //        case MiniGameType.Endless: 
+        //            manager.PlayerEndlessRoom();
+        //            break;
 
-                case MiniGameType.BossFight:
-                    manager.PlayBossFightRoom();
-                    break;
+        //        case MiniGameType.BossFight:
+        //            manager.PlayBossFightRoom();
+        //            break;
 
-                default:
-                    Console.WriteLine("Unknown GameRoom?");
-                    break;
+        //        default:
+        //            Console.WriteLine("Unknown GameRoom?");
+        //            break;
 
-            }
+        //    }
         }
     }
 }

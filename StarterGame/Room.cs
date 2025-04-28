@@ -7,11 +7,85 @@ namespace StarterGame
     /*
      * Fall 2024
      */
+
+    public interface IRoomDelegate
+    {
+        Room OnGetExit(string roomName);
+        Room ContainingRoom { get; set; }
+        
+    }
+    
+    public class TrapRoom : IRoomDelegate
+    {
+        private bool _engaged;
+        public bool Engaged { set { _engaged = value; } get
+            {
+                return _engaged;
+            } }
+        private string _password;
+        private IRoomDelegate _delegate;
+        private Room _containingRoom;
+        public Room ContainingRoom
+        {
+            set
+            {
+                _containingRoom = value;
+            }
+            get
+            {
+                return _containingRoom;
+            }
+        }
+        public IRoomDelegate Delegate
+        {
+            set
+            {
+                if (value == null)
+                {
+                    if (_delegate != null)
+                    {
+                        _delegate.ContainingRoom = null;
+                        _delegate = value;
+                    }
+                    else
+                    {
+                        if (value.ContainingRoom != null)
+                        {
+                            value.ContainingRoom.Delegate = null;
+                            value.ContainingRoom = this;
+                            _delegate = value;
+                        }
+                    }
+                }
+
+            }
+            get
+            {
+                return _delegate;
+            }
+        }
+        public TrapRoom() : this("please") { }
+        public TrapRoom(string password)
+        {
+            _password = password;
+            Engaged = true;
+            NotificationCenter.Instance.AddObserver("PlayerDidSaySomething", PlayerDidSaySomething);
+        }
+        public Room OnGetExit(string roomName)
+        {
+            return null;
+        }
+        
+        
+    }
     public class Room : Trigger
     {
         private Dictionary<string, Room> _exits;
         private string _tag;
         private IItem _floor;
+        
+
+        
         public string Tag { get { return _tag; } set { _tag = value; } }
 
         public Room() : this("No Tag"){}
@@ -21,6 +95,7 @@ namespace StarterGame
         {
             _exits = new Dictionary<string, Room>();
             this.Tag = tag;
+            Delegate = null;
         }
 
         public void SetExit(string exitName, Room room)
@@ -31,7 +106,14 @@ namespace StarterGame
         public Room GetExit(string exitName)
         {
             Room room = null;
-            _exits.TryGetValue(exitName, out room);
+            if(Delegate == null)
+            {
+                _exits.TryGetValue(exitName, out room);
+            }
+            else
+            {
+                room = Delegate.OnGetExit(exitName);
+            }
             return room;
         }
 

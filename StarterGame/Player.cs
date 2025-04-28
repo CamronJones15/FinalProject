@@ -11,7 +11,7 @@ namespace StarterGame
     {
         private Room _currentRoom = null;
 
-        private Dictionary<string, Item> _inventory = new Dictionary<string, Item>();
+        private Dictionary<string, IItem> _inventory = new Dictionary<string, IItem>();
         public Room CurrentRoom { get { return _currentRoom; } set { _currentRoom = value; } }
 
         public Player(Room room)
@@ -35,33 +35,7 @@ namespace StarterGame
 
         // Commented this out, needs to be redone
         //public void AttackThis(string _enemy, string itemName){
-            
-
-            
-        //    if(weapons.Count == 0)
-        //    {
-        //        Console.WriteLine($"You cannot attack {_enemy} with no weapons!!");
-        //        return;
-        //    }
-        //    Console.WriteLine($"Choose a weapon to attack {_enemy}:");
-        //    for (int i = 0; i < weapons.Count; i++){
-        //        NormalMessage($"{i + 1}. {weapons[i].Name}");
-
-        //    }
-
-        //    Console.Write("Enter the number of your choice:");
-        //    string input = Console.ReadLine();
-
-        //    if (int.TryParse(input, out int choice) && choice > 0 && choice <= weapons.Count)
-        //    {
-        //        Item selectedWeapon = weapons[choice - 1];
-        //        NormalMessage($"You swing your {selectedWeapon.Name} at the {_enemy} and deal damage!");
-        //    }
-        //    else
-        //    {
-        //        ErrorMessage("Invalid choice! You hesitate and miss your attack.");
-        //    }
-        //}
+        
         public void Dig(string _location)
         {
             if (_inventory.ContainsKey("Shovel"))
@@ -74,31 +48,57 @@ namespace StarterGame
                 ErrorMessage($"You try to dig at {_location}, but you need a shovel!");
             }
         }
-
-        public void PickUpItem(string item){
-            //have to figure how to parse the string into an item, maybe by using a dictionary where the key is the name of the item
-
+        public void Give(IItem item)
+        {
+            _inventory.Add(item.Name, item);
+        }
+        public IItem Take(string itemName)
+        {
+            IItem itemToRemove;
+            _inventory.TryGetValue(itemName, out itemToRemove);
+            if(itemToRemove != null)
+            {
+                _inventory.Remove(itemName);
+            }
+            return itemToRemove;
         }
 
-        public void InspectItem(string itemName)
+        public void Inventory()
         {
-            // if (_inventory.ContainsKey(item))
-            // {
-            //     Item inspectedItem;
-            //     if(_inventory.TryGetValue(item, out inspectedItem))
-            //     {
-            //         InfoMessage(inspectedItem.Inspect());
-            //     }
-            //     else
-            //     {
-            //         WarningMessage("Error: Unable to inspect item");
-            //     }
-            // }
-            // else
-            // {
-            //     WarningMessage("Item not in inventory");
-            // }
+            foreach(KeyValuePair<string, IItem>item in _inventory){
+                string itemName = item.Key;
+                IItem _item = item.Value;
+                InfoMessage(_item.Description);
+            }
+        }
+        public void PickUp(string itemName){
+            IItem item = CurrentRoom.Pickup(itemName);
+            if(item!= null)
+            {
+                Give(item);
+                InfoMessage("You picked up " + item.Name);
+            }
+            else
+            {
+                WarningMessage("There is nothing named " + itemName + " here.");
+            }
 
+        }
+        public void Drop(string itemName)
+        {
+            IItem item = Take(itemName);
+            if(item != null)
+            {
+                CurrentRoom.Drop(item);
+                InfoMessage("You dropped " + item.Name);
+            }
+            else
+            {
+                WarningMessage("You have nothing named " + itemName + " in your inventory.");
+            }
+        }
+        public void InspectItem(string itemName)
+        { 
             IItem itemToInspect = CurrentRoom.Pickup(itemName);
             if(itemToInspect != null){
                 InfoMessage(itemName + " is " +

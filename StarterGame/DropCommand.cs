@@ -14,7 +14,7 @@ namespace StarterGame{
         override
         public bool Execute(Player player){
             if(this.HasSecondWord()){
-                player.DropItem(this.SecondWord);
+                player.Drop(this.SecondWord);
             }
             else{
                 player.WarningMessage("\nDrop what?");
