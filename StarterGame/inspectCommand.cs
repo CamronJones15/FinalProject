@@ -8,7 +8,7 @@ namespace StarterGame
 
         public InspectCommand() : base(){
             
-            this.Name = "Inspect";
+            this.Name = "inspect";
         }
 
         override
