@@ -102,6 +102,20 @@ namespace StarterGame
             Room ghostroom7 = new Room("an room where you interact with ghost Bob");
             Room ghostroom8 = new Room("an room where you interact with ghost Bob");
 
+            //Ghost Rooms 
+            Ghost john = new Ghost("John", "Be careful... the minotaur is near.");
+            Ghost reign = new Ghost("Reign", "Solve the puzzle, or be trapped forever!");
+            Ghost bob = new Ghost("Bob", "You made it farther than anyone else...");
+
+            ghostroom1.GhostInRoom = john;
+            ghostroom2.GhostInRoom = john;
+            ghostroom3.GhostInRoom = john;
+            ghostroom4.GhostInRoom = reign;
+            ghostroom5.GhostInRoom = reign;
+            ghostroom6.GhostInRoom = bob;
+            ghostroom7.GhostInRoom = bob;
+            ghostroom8.GhostInRoom = bob;
+
             //set exits
             mainroom.SetExit("south", intersection1);
             intersection1.SetExit("east",ghostroom1);

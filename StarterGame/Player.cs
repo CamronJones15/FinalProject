@@ -103,6 +103,17 @@ namespace StarterGame
             }
         }
 
+        public void TalkToGhost(){
+            if (CurrentRoom.GhostInRoom != null)
+            {
+                CurrentRoom.GhostInRoom.Talk(this);
+            }
+            else
+            {
+                WarningMessage("There is no ghost here to talk to.");
+            }
+            }
+
         public void OutputMessage(string message)
         {
             Console.WriteLine(message);
