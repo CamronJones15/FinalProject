@@ -6,11 +6,8 @@ namespace StarterGame
 
     public class InspectCommand : Command{
 
-        private CommandWords _words;
-
-        public InspectCommand() : this(new CommandWords()) { }
-        public InspectCommand(CommandWords commands) : base(){
-            _words = commands;
+        public InspectCommand() : base(){
+            
             this.Name = "Inspect";
         }
 

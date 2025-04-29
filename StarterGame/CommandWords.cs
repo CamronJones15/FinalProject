@@ -10,7 +10,7 @@ namespace StarterGame
     public class CommandWords
     {
         private Dictionary<string, Command> _commands;
-        private static Command[] _commandArray = { new GoCommand(), new QuitCommand(), new PickUpCommand(), new DropCommand(), new InspectCommand(), new InventoryCommand()};
+        private static Command[] _commandArray = { new GoCommand(), new QuitCommand(),new InspectCommand(), new PickUpCommand(), new DropCommand(), new InventoryCommand()};
 
         public CommandWords() : this(_commandArray) {}
 
