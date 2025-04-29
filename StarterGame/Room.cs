@@ -52,7 +52,7 @@ namespace StarterGame
                         if (value.ContainingRoom != null)
                         {
                             value.ContainingRoom.Delegate = null;
-                            value.ContainingRoom = this;
+                            value.ContainingRoom.Delegate = this;
                             _delegate = value;
                         }
                     }
@@ -71,8 +71,17 @@ namespace StarterGame
             Engaged = true;
             NotificationCenter.Instance.AddObserver("PlayerDidSaySomething", PlayerDidSaySomething);
         }
+        private void PlayerDidSaySomething(Notification notification){
+            string word = notification.Object as string;
+            if(!string.IsNullOrEmpty(word)&&word.Equals(_password,StringComparison.OrdinalIgnoreCase)){
+                Engaged = false;
+            }
+        }
         public Room OnGetExit(string roomName)
         {
+            if(!Engaged && ContainingRoom != null){
+                return ContainingRoom.GetExit(roomName);
+            }
             return null;
         }
         
@@ -84,7 +93,7 @@ namespace StarterGame
         private string _tag;
         private IItem _floor;
         
-
+        public IRoomDelegate Delegate{get; set;}
         
         public string Tag { get { return _tag; } set { _tag = value; } }
 

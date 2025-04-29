@@ -11,7 +11,7 @@ namespace StarterGame
     {
         private Room _currentRoom = null;
 
-        private Dictionary<string, IItem> _inventory = new Dictionary<string, IItem>();
+        private ItemContainer _inventory = new ItemContainer();
         public Room CurrentRoom { get { return _currentRoom; } set { _currentRoom = value; } }
 
         public Player(Room room)
@@ -36,9 +36,11 @@ namespace StarterGame
         // Commented this out, needs to be redone
         //public void AttackThis(string _enemy, string itemName){
         
+
+        //this sucks and doesn't actually do anything
         public void Dig(string _location)
         {
-            if (_inventory.ContainsKey("Shovel"))
+            if (_inventory.DoesContain("shovel"))
             {
                 NormalMessage($"You dig at {_location} and uncover something hidden!");
 
@@ -50,26 +52,16 @@ namespace StarterGame
         }
         public void Give(IItem item)
         {
-            _inventory.Add(item.Name, item);
+            _inventory.Insert(item);
         }
         public IItem Take(string itemName)
         {
-            IItem itemToRemove;
-            _inventory.TryGetValue(itemName, out itemToRemove);
-            if(itemToRemove != null)
-            {
-                _inventory.Remove(itemName);
-            }
-            return itemToRemove;
+            return _inventory.Remove(itemName);
         }
 
         public void Inventory()
         {
-            foreach(KeyValuePair<string, IItem>item in _inventory){
-                string itemName = item.Key;
-                IItem _item = item.Value;
-                InfoMessage(_item.Description);
-            }
+            InfoMessage(_inventory.Description);
         }
         public void PickUp(string itemName){
             IItem item = CurrentRoom.Pickup(itemName);

@@ -56,7 +56,15 @@ namespace StarterGame
         
         public bool Insert(IItem item)
         {
-            return false;
+            _items.Add(item.Name, item);
+            bool value = false;
+            if(_items.ContainsKey(item.Name)){
+                value = true;
+            }
+            return value;
+        }
+        public bool DoesContain(string itemName){
+            return _items.ContainsKey(itemName);
         }
 
         public IItem Remove(string itemName)
