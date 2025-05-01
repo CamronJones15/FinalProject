@@ -14,6 +14,33 @@ namespace StarterGame
         Room ContainingRoom { get; set; }
         
     }
+
+    public class BossRoomProxy : IRoomDelegate
+    {
+        private Room _bossRoom;
+        public Room ContainingRoom { get; set; }
+
+        private string[] _requiredItems = { "Key of Life", "Gold Medallion" };
+
+        public BossRoomProxy(Room realBossRoom)
+        {
+            _bossRoom = realBossRoom;
+        }
+
+        public Room OnGetExit(string direction)
+        {
+            //Player player = Player.Instance; Looking for instance in player class ERROR
+            foreach (string item in _requiredItems)
+            {
+              // if (!player.HasItem(item))
+                {
+                    Console.WriteLine($"You cannot enter the boss room without the {item}.");
+                    return null;
+                }
+            }
+            return _bossRoom;
+        }
+    }
     
     public class TrapRoom : IRoomDelegate
     {
