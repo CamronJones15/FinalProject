@@ -9,6 +9,8 @@ namespace StarterGame
      */
     public class Player
     {
+        private int _health = 100;
+        public int Health { get { return _health; } private set { _health = value; } }
         private Room _currentRoom = null;
 
         private ItemContainer _inventory = new ItemContainer();
@@ -34,10 +36,17 @@ namespace StarterGame
         }
 
         // Commented this out, needs to be redone
-        //public void AttackThis(string _enemy, string itemName){
-        
+        public void TakeDamage(int amount)
+        {
+            Health -= amount;
+            ErrorMessage($"You have been attacked! Health: {Health}");
 
-        //this sucks and doesn't actually do anything
+            if(Health <= 0)
+            {
+                ErrorMessage("You have been slain..");
+                Environment.Exit(0);
+            }
+        }
         public void Dig(string _location)
         {
             if (_inventory.DoesContain("shovel"))
@@ -112,8 +121,18 @@ namespace StarterGame
             {
                 WarningMessage("There is no ghost here to talk to.");
             }
+        }
+        public void GiveGhost(string itemName)
+        {
+            if (CurrentRoom.GhostInRoom != null)
+            {
+                CurrentRoom.GhostInRoom.ReceiveItem(this, itemName);
             }
-
+            else
+            {
+                WarningMessage("There is no ghost here to give something to.");
+            }
+        }
         public void OutputMessage(string message)
         {
             Console.WriteLine(message);

@@ -103,10 +103,12 @@ namespace StarterGame
             Room ghostroom8 = new Room("further in the labrynth");
 
             //Ghost Rooms 
-            Ghost john = new Ghost(ghostroom1,"John", "Be careful... the minotaur is near.");
+            Ghost john = new Ghost(ghostroom1,"John", "Be careful... the minotaur is near."); //we seriously need better hints lmao
             Ghost reign = new Ghost(ghostroom2,"Reign", "Solve the puzzle, or be trapped forever!");
             Ghost bob = new Ghost(ghostroom3,"Bob", "You made it farther than anyone else...");
-
+            john.PreferredItem = "Diamonds";
+            reign.PreferredItem = "Cookie";
+            bob.PreferredItem = "CrunchWrap";
             ghostroom1.GhostInRoom = john;
             ghostroom2.GhostInRoom = john;
             ghostroom3.GhostInRoom = john;
@@ -188,7 +190,7 @@ namespace StarterGame
             IItemContainer chest2 = new ItemContainer("chest", 0.25f);
             IItem item2 = new Item("Diamonds", 0.2f);
             chest2.Insert(item2);
-            item2 = new Item("Gold", 0.1f);
+            item2 = new Item("CrunchWrap", 0.1f);
             chest2.Insert(item2);
             deadendroom13.Drop(chest2);
 
