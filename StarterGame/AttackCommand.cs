@@ -7,26 +7,22 @@ namespace StarterGame
     public class AttackCommand : Command{
 
         private string _enemy;
-        private CommandWords _words;
 
-        public AttackCommand() : this(new CommandWords()) { }
-
-        public AttackCommand(CommandWords commands) : base()
+        
+        public AttackCommand() : base()
         {
-            _words = commands;
+            
             this.Name = "attack";
         }
         override
         public bool Execute(Player player){
 
-            if (this.HasSecondWord() && this.HasThirdWord()) {
-                //player.AttackThis(SecondWord, ThirdWord);
-            }
-            else if(this.HasSecondWord())
+            if (this.HasSecondWord())
             {
-                player.WarningMessage("Attack " + SecondWord + " with what?");
+                player.AttackThis(SecondWord);
             }
-            else{
+            else
+            {
                 player.WarningMessage("Attack what?");
             }
             return false;

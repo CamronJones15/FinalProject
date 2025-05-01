@@ -45,9 +45,13 @@ namespace StarterGame
                 return description;
             }
         }
-        public ItemContainer() : base() { }
+        public ItemContainer() : base() {
+            _items = new Dictionary<string, IItem>();
+        }
 
-        public ItemContainer(string name) : base(name) { }
+        public ItemContainer(string name) : base(name) {
+            _items = new Dictionary<string, IItem>();
+        }
 
         public ItemContainer(string name, float weight) : base(name, weight)
         {
@@ -56,12 +60,17 @@ namespace StarterGame
 
         public bool Insert(IItem item)
         {
-            _items.Add(item.Name, item);
             bool value = false;
-            if (_items.ContainsKey(item.Name))
+            if (item != null)
             {
-                value = true;
+                _items.Add(item.Name, item);
+                
+                if (_items.ContainsKey(item.Name))
+                {
+                    value = true;
+                }
             }
+            
             return value;
         }
         public bool DoesContain(string itemName)

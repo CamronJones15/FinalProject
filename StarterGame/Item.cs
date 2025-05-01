@@ -23,7 +23,7 @@ namespace StarterGame{
         private IItem _decorator;
         public IItem Decorator { get { return _decorator; } set { _decorator = value; } }
         public virtual bool IsContainer { get { return false; } }
-        public Item(string name) : this(name, 1) {}
+        public Item(string name) : this(name, 0) {}
         public Item(string name, float weight){
             _name = name;
             _weight = weight;

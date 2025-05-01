@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Security.Cryptography.X509Certificates;
 
 namespace StarterGame
 {
@@ -13,12 +14,13 @@ namespace StarterGame
         public int Health { get { return _health; } set { _health = value; } }
         private Room _currentRoom = null;
 
-        private ItemContainer _inventory = new ItemContainer();
+        private ItemContainer _inventory;
         public Room CurrentRoom { get { return _currentRoom; } set { _currentRoom = value; } }
 
         public Player(Room room)
         {
             _currentRoom = room;
+            _inventory = new ItemContainer("player inventory:");
         }
 
         public void WaltTo(string direction)

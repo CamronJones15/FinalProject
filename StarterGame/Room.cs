@@ -171,7 +171,7 @@ namespace StarterGame
         public IItem Pickup(string itemName){
             IItem tempItem = null;
             if(_floor != null){
-                if(_floor.Name.Equals(itemName)){
+                if(_floor.Name.ToLower().Equals(itemName)){
                     tempItem = _floor;
                     _floor = null;
                     return tempItem;
