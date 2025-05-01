@@ -118,37 +118,49 @@ namespace StarterGame
 
             //set exits
             mainroom.SetExit("south", intersection1);
-            intersection1.SetExit("east",ghostroom1);
+            intersection1.SetExit("east", ghostroom1);
             intersection1.SetExit("west", intersection2);
+            
             intersection2.SetExit("west", deadendroom1);
             deadendroom1.SetExit("east", intersection2);
             intersection2.SetExit("south", ghostroom2);
+            
+            // Right Branch from Ghostroom1
             ghostroom1.SetExit("east", hbdroom);
             hbdroom.SetExit("east", intersection3);
             intersection3.SetExit("south", ghostroom3);
             ghostroom3.SetExit("south", hoproom);
             hoproom.SetExit("south", intersection7);
+            
             intersection7.SetExit("east", deadendroom5);
             deadendroom5.SetExit("west", intersection7);
             intersection7.SetExit("west", deadendroom6);
-            deadendroom6.SetExit("west", intersection7);
+            deadendroom6.SetExit("east", intersection7);
             intersection7.SetExit("south", intersection8);
+            
             intersection8.SetExit("west", ghostroom5);
-            intersection8.SetExit("east", deadendroom7);
             ghostroom5.SetExit("west", mssgvowelsroom);
             mssgvowelsroom.SetExit("south", intersection9);
             intersection9.SetExit("east", deadendroom8);
             intersection9.SetExit("south", ghostroom6);
             ghostroom6.SetExit("south", bossRoom);
+            
+            intersection8.SetExit("east", deadendroom7);
+            deadendroom7.SetExit("west", intersection8);
+            
+            // Left Branch from Ghostroom2
             ghostroom2.SetExit("south", greenRoom);
             greenRoom.SetExit("south", intersection4);
             intersection4.SetExit("east", intersection5);
             intersection4.SetExit("west", intersection6);
+            
             intersection6.SetExit("south", deadendroom4);
             deadendroom4.SetExit("north", intersection6);
             intersection6.SetExit("east", intersection4);
+            
             intersection4.SetExit("south", deadendroom9);
             deadendroom9.SetExit("north", intersection4);
+            
             intersection5.SetExit("south", ghostroom4);
             ghostroom4.SetExit("south", tmtroom);
             tmtroom.SetExit("south", intersection10);
@@ -156,16 +168,18 @@ namespace StarterGame
             deadendroom10.SetExit("west", intersection10);
             intersection10.SetExit("west", deadendroom11);
             deadendroom11.SetExit("east", intersection10);
+            
             intersection10.SetExit("south", ghostroom7);
             ghostroom7.SetExit("south", endlessroom);
             endlessroom.SetExit("south", intersection11);
+            
             intersection11.SetExit("west", deadendroom12);
             deadendroom12.SetExit("east", intersection11);
             intersection11.SetExit("east", deadendroom13);
             deadendroom13.SetExit("west", intersection11);
+            
             intersection11.SetExit("south", ghostroom8);
             ghostroom8.SetExit("south", bossRoom);
-
             //setup delegates
             //MiniGame minigame1 = new MiniGame();
             //minigame1.Engaged = true;
