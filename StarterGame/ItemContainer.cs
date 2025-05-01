@@ -25,7 +25,7 @@ namespace StarterGame
             get
             {
                 float weight = base.Weight;
-                foreach(IItem item in _items.Values)
+                foreach (IItem item in _items.Values)
                 {
                     weight += item.Weight;
                 }
@@ -38,7 +38,7 @@ namespace StarterGame
             get
             {
                 string description = base.Description;
-                foreach(IItem item in _items.Values)
+                foreach (IItem item in _items.Values)
                 {
                     description += "\n\t" + item.Description;
                 }
@@ -53,17 +53,19 @@ namespace StarterGame
         {
             _items = new Dictionary<string, IItem>();
         }
-        
+
         public bool Insert(IItem item)
         {
             _items.Add(item.Name, item);
             bool value = false;
-            if(_items.ContainsKey(item.Name)){
+            if (_items.ContainsKey(item.Name))
+            {
                 value = true;
             }
             return value;
         }
-        public bool DoesContain(string itemName){
+        public bool DoesContain(string itemName)
+        {
             return _items.ContainsKey(itemName);
         }
 
@@ -76,6 +78,18 @@ namespace StarterGame
                 _items.Remove(itemName);
             }
             return itemToRemove;
+        }
+
+        public IItem GetItem(string itemName)
+        {
+            foreach (var item in _items)
+            {
+                if (itemName.Equals(itemName, StringComparison.OrdinalIgnoreCase))
+                {
+                    return item.Value;
+                }
+            }
+            return null;
         }
     }
 }

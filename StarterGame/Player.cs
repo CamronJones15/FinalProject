@@ -90,6 +90,28 @@ namespace StarterGame
             return _inventory.Remove(itemName);
         }
 
+        public void Eat(string itemName)
+        {
+            IItem item = _inventory.GetItem(itemName);
+            if(item == null)
+            {
+                WarningMessage($"You don't have an item called {itemName} to eat.");
+                
+            }
+            if(item is Item edible && edible.IsEdible)
+            {
+                int healed = Math.Min(edible.HealAmount, 100 - Health);
+                Health += healed;
+                _inventory.Remove(itemName);
+                InfoMessage($"You ate the {itemName}. Restored {healed} HP. Current health:{Health}");
+            }
+            else
+            {
+                WarningMessage($"You can't eat {itemName}");
+            }
+        }
+
+
         public void Inventory()
         {
             InfoMessage(_inventory.Description);

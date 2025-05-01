@@ -87,12 +87,12 @@ namespace StarterGame
             Room deadendroom13 = new Room("Deadend Room 13: at a deadend, the only available path is the way you came");
             Room bossRoom = new Room("Boss Room: in an arena where the minotaur sits");
             //Room hbd = new Room("describe room");
-            Room hbdroom = new Room("Happy Birthday Room: in a minigame room in the maze.");
-            Room greenRoom = new Room("Green House Room: in a minigame room in the maze.");
-            Room hoproom = new Room("Hall Of Potraits Room: in a minigame room in the maze.");
-            Room tmtroom = new Room("Theater Room: in a minigame room in the maze.");
-            Room endlessroom = new Room("Endless Hall Room: in a minigame room in the maze.");
-            Room mssgvowelsroom = new Room("Missing Vowels Room: in a minigame room in the maze.");
+            Room hbdroom = new Room("Happy Birthday Room: There is an Suprise Item in Here!!!");
+            Room greenRoom = new Room("Green House Room: There is an Suprise Item in Here!!!");
+            Room kitchenRoom = new Room("Kitchen Room: Are you Hungry?? Collect Some Food!!.");
+            Room iceroom = new Room("Ice Room: You got to Healed. Grab an Ice Pack!");
+            Room emergencyroom = new Room("Emergency Room: We Don't want you to have any scars. Grab an Bandage!");
+            Room chemicalroom = new Room("Chemcial Room: There is an special potion. Collect it!");
             Room ghostroom1 = new Room("Ghost Room 1: further in the labrynth");
             Room ghostroom2 = new Room("Ghost Room 2: further in the labrynth");
             Room ghostroom3 = new Room("Ghost Room 3:  further in the labrynth");
@@ -129,21 +129,21 @@ namespace StarterGame
             ghostroom1.SetExit("west", intersection2);
             hbdroom.SetExit("east", intersection3);
             intersection3.SetExit("south", ghostroom3);
-            ghostroom3.SetExit("south", hoproom);
+            ghostroom3.SetExit("south", kitchenRoom);
             ghostroom3.SetExit("north", intersection3);
-            hoproom.SetExit("south", intersection7);
+            kitchenRoom.SetExit("south", intersection7);
             
             intersection7.SetExit("east", deadendroom5);
             deadendroom5.SetExit("west", intersection7);
             intersection7.SetExit("west", deadendroom6);
-            deadendroom6.SetExit("east", intersection7);
+            deadendroom6.SetExit("west", intersection7);
             intersection7.SetExit("south", intersection8);
             
             intersection8.SetExit("west", ghostroom5);
             intersection8.SetExit("east", deadendroom7);
-            ghostroom5.SetExit("west", mssgvowelsroom);
+            ghostroom5.SetExit("west", iceroom);
             ghostroom5.SetExit("east", intersection8);
-            mssgvowelsroom.SetExit("south", intersection9);
+            iceroom.SetExit("south", intersection9);
             intersection9.SetExit("east", deadendroom8);
             intersection9.SetExit("south", ghostroom6);
             ghostroom6.SetExit("south", bossRoom);
@@ -161,29 +161,26 @@ namespace StarterGame
             deadendroom9.SetExit("north", intersection4);
             intersection5.SetExit("south", ghostroom4);
             
-            ghostroom4.SetExit("south", tmtroom);
+            ghostroom4.SetExit("south", emergencyroom);
             ghostroom4.SetExit("north", intersection5);
-            tmtroom.SetExit("south", intersection10);
+            emergencyroom.SetExit("south", intersection10);
             intersection10.SetExit("east", deadendroom10);
             deadendroom10.SetExit("west", intersection10);
             intersection10.SetExit("west", deadendroom11);
             deadendroom11.SetExit("east", intersection10);
             intersection10.SetExit("south", ghostroom7);
             
-            ghostroom7.SetExit("south", endlessroom);
+            ghostroom7.SetExit("south", chemicalroom);
             ghostroom7.SetExit("north", intersection10);
-            endlessroom.SetExit("south", intersection11);
+            chemicalroom.SetExit("south", intersection11);
             intersection11.SetExit("west", deadendroom12);
             deadendroom12.SetExit("east", intersection11);
             intersection11.SetExit("east", deadendroom13);
             deadendroom13.SetExit("west", intersection11);
             intersection11.SetExit("south", ghostroom8);
-
-            deadendroom7.SetExit("west", intersection8);
-            deadendroom8.SetExit("west", intersection9);
+            
             ghostroom8.SetExit("south", bossRoom);
             ghostroom8.SetExit("north", intersection11);
-            intersection5.SetExit("west", intersection4);
             //setup delegates
             //MiniGame minigame1 = new MiniGame();
             //minigame1.Engaged = true;
@@ -198,17 +195,59 @@ namespace StarterGame
             chest1.Insert(item1);
             mainroom.Drop(chest1);
 
-            Item sword = new Item("sword", 1.5f);
-            deadendroom4.Drop(sword);
-            //adding minotaur
-            Minotaur mino = new Minotaur(bossRoom);
-            bossRoom.MinotaurInRoom = mino;
             IItemContainer chest2 = new ItemContainer("chest", 0.25f);
             IItem item2 = new Item("Diamonds", 0.2f);
             chest2.Insert(item2);
             item2 = new Item("CrunchWrap", 0.1f);
             chest2.Insert(item2);
             deadendroom13.Drop(chest2);
+
+            IItemContainer chest3 = new ItemContainer("chest", 0.25f);
+            IItem item3 = new Item("Chocolate Cake", 0.2f , 20);
+            chest3.Insert(item3);
+            item3 = new Item("Strawberry Cake", 0.1f , 20);
+            chest3.Insert(item3);
+            hbdroom.Drop(chest3);
+
+            IItemContainer chest4 = new ItemContainer("chest", 0.25f);
+            IItem item4 = new Item("Spinach", 0.2f ,20);
+            chest4.Insert(item4);
+            greenRoom.Drop(chest4);
+
+            IItemContainer chest5 = new ItemContainer("chest", 0.25f);
+            IItem item5 = new Item("Pizza", 0.2f, 10);
+            chest5.Insert(item5);
+            kitchenRoom.Drop(chest5);
+
+            IItemContainer chest6 = new ItemContainer("chest", 0.25f);
+            IItem item6 = new Item("Ice Pack", 0.2f, 2);
+            chest6.Insert(item6);
+            iceroom.Drop(chest6);
+
+            IItemContainer chest7 = new ItemContainer("chest", 0.25f);
+            IItem item7 = new Item("Bandages", 0.1f , 5);
+            chest7.Insert(item7);
+            emergencyroom.Drop(chest7);
+
+            IItemContainer chest8 = new ItemContainer("chest", 0.25f);
+            IItem item8 = new Item("Potion", 0.2f, 10);
+            chest8.Insert(item8);
+            chemicalroom.Drop(chest8);
+
+            IItemContainer chest9 = new ItemContainer("chest", 0.25f);
+            IItem item9 = new Item("Key Of Life", 0.1f);
+            chest9.Insert(item9);
+            deadendroom6.Drop(chest9);
+
+            IItemContainer chest10 = new ItemContainer("chest", 0.25f);
+            IItem item10 = new Item("Gold Medallion", 0.2f);
+            chest10.Insert(item10);
+            chemicalroom.Drop(chest10);
+
+
+
+
+
 
             Entrance = mainroom;
             Exit = bossRoom;
