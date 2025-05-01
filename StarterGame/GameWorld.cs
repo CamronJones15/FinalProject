@@ -136,7 +136,7 @@ namespace StarterGame
             intersection7.SetExit("east", deadendroom5);
             deadendroom5.SetExit("west", intersection7);
             intersection7.SetExit("west", deadendroom6);
-            deadendroom6.SetExit("west", intersection7);
+            deadendroom6.SetExit("east", intersection7);
             intersection7.SetExit("south", intersection8);
             
             intersection8.SetExit("west", ghostroom5);
@@ -178,9 +178,12 @@ namespace StarterGame
             intersection11.SetExit("east", deadendroom13);
             deadendroom13.SetExit("west", intersection11);
             intersection11.SetExit("south", ghostroom8);
-            
+
+            deadendroom7.SetExit("west", intersection8);
+            deadendroom8.SetExit("west", intersection9);
             ghostroom8.SetExit("south", bossRoom);
             ghostroom8.SetExit("north", intersection11);
+            intersection5.SetExit("west", intersection4);
             //setup delegates
             //MiniGame minigame1 = new MiniGame();
             //minigame1.Engaged = true;
@@ -195,6 +198,11 @@ namespace StarterGame
             chest1.Insert(item1);
             mainroom.Drop(chest1);
 
+            Item sword = new Item("sword", 1.5f);
+            deadendroom4.Drop(sword);
+            //adding minotaur
+            Minotaur mino = new Minotaur(bossRoom);
+            bossRoom.MinotaurInRoom = mino;
             IItemContainer chest2 = new ItemContainer("chest", 0.25f);
             IItem item2 = new Item("Diamonds", 0.2f);
             chest2.Insert(item2);

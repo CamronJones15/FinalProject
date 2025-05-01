@@ -10,7 +10,7 @@ namespace StarterGame
     public class Player
     {
         private int _health = 100;
-        public int Health { get { return _health; } private set { _health = value; } }
+        public int Health { get { return _health; } set { _health = value; } }
         private Room _currentRoom = null;
 
         private ItemContainer _inventory = new ItemContainer();
@@ -36,7 +36,29 @@ namespace StarterGame
         }
 
         // Commented this out, needs to be redone
-        public void TakeDamage(int amount)
+        public void AttackThis(string targetName)
+        {
+            if (CurrentRoom.MinotaurInRoom != null && targetName.ToLower() == "minotaur")
+            {
+                int damage = 5;
+
+                if (_inventory.DoesContain("sword"))
+                {
+                    damage = 25;
+                    InfoMessage("You swing your sword at the Minotaur and slash it.");
+                }
+                else
+                {
+                    WarningMessage("You punch the Minotaur, he barely seems fazed");
+                }
+                CurrentRoom.MinotaurInRoom.TakeDamage(damage, this);
+            }
+            else
+            {
+                WarningMessage("There is no " + targetName + " here to attack.");
+            }
+        }
+        public virtual void TakeDamage(int amount)
         {
             Health -= amount;
             ErrorMessage($"You have been attacked! Health: {Health}");

@@ -119,7 +119,8 @@ namespace StarterGame
         private Dictionary<string, Room> _exits;
         private string _tag;
         private IItem _floor;
-        
+        private Minotaur _minotaur;
+        public Minotaur MinotaurInRoom { get { return _minotaur; } set {_minotaur = value; } }
         public IRoomDelegate Delegate{get; set;}
         
         public string Tag { get { return _tag; } set { _tag = value; } }
@@ -183,7 +184,7 @@ namespace StarterGame
         }
         public string Description()
         {
-            return "You are " + this.Tag + ".\n *** " + this.GetExits() + "\nFloor: " + (_floor==null?"empty":_floor.Name) + (_ghost == null ? "" : $"\nYou see a ghost here: {_ghost.Name}");
+            return "You are " + this.Tag + ".\n *** " + this.GetExits() + "\nFloor: " + (_floor==null?"empty":_floor.Name) + (_ghost == null ? "" : $"\nYou see a ghost here: {_ghost.Name}")+(_minotaur == null ? "" : $"\nThe minoutaur is here.. prepare for battle!");
         }
     }
 }
