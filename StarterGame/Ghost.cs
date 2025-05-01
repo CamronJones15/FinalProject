@@ -11,13 +11,13 @@ namespace StarterGame
         public string Name{get; private set;}
         public string Dialogue{get; private set;}
 
-        public Ghost(string name , string dialogue){
-            Name = name ;
+        
+        public Ghost(Room room, string name, string dialogue) : base(room)
+        {
+            CurrentRoom = room;
+            Name = name;
             Dialogue = dialogue;
-
-
         }
-
         public void Talk(Player player){
             player.InfoMessage($"{Name} says: \"{Dialogue}");
 
