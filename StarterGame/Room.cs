@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System;
+using System.Numerics;
 
 namespace StarterGame
 {
@@ -127,8 +128,12 @@ namespace StarterGame
         public Room OnGetExit(string roomName)
         {
             if(!Engaged && ContainingRoom != null){
-                return ContainingRoom.GetExit(roomName);
+                if (ContainingRoom._exits.ContainsKey(roomName))
+                {
+                    return ContainingRoom._exits[roomName];
+                }
             }
+            Console.WriteLine("You have entered a trap room!! Say the magic word to escape");
             return null;
         }
 
@@ -144,7 +149,7 @@ namespace StarterGame
     }
     public class Room : Trigger
     {
-        private Dictionary<string, Room> _exits;
+        public Dictionary<string, Room> _exits;
         private string _tag;
         private IItem _floor;
         private Minotaur _minotaur;

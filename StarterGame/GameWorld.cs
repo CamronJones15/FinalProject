@@ -262,9 +262,9 @@ namespace StarterGame
             //bossRoom.Delegate = proxy;
             //gateRoom.Delegate = proxy;
 
-            TrapRoom trapDelegate = new TrapRoom("sprout");
-            trapDelegate.ContainingRoom = greenTrap;
-            greenTrap.Delegate = trapDelegate;
+            TrapRoom trapRoom = new TrapRoom("sprout");
+            trapRoom.ContainingRoom = greenTrap;
+            greenTrap.Delegate = trapRoom;
 
             TrapRoom shadowDelegate = new TrapRoom("release");
             shadowDelegate.ContainingRoom = shadowTrap;
