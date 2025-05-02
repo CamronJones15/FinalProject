@@ -156,7 +156,6 @@ namespace StarterGame
             deadendroom8.SetExit("west", intersection9);
             intersection9.SetExit("south", ghostroom6);
             ghostroom6.SetExit("south", gateRoom);
-            gateRoom.SetExit("south", bossRoom);
             gateRoom.SetExit("north", ghostroom6);
             ghostroom6.SetExit("north", intersection9);
             
@@ -196,7 +195,6 @@ namespace StarterGame
             
             ghostroom8.SetExit("south", gateRoom);
             intersection5.SetExit("west", intersection4);
-            gateRoom.SetExit("south", bossRoom);
             gateRoom.SetExit("north", ghostroom8);
             ghostroom8.SetExit("north", intersection11);
             //setup delegates
@@ -241,7 +239,7 @@ namespace StarterGame
 
 
             IItem medallion = new Item("goldmedallion", 0.2f);
-            chemicalroom.Drop(medallion);
+            ghostroom1.Drop(medallion);
 
 
             Item sword = new Item("sword", 1.5f, true, 100);

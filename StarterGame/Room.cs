@@ -20,16 +20,13 @@ namespace StarterGame
     public class BossRoomProxy : IRoomDelegate
     {
         private readonly Room _bossRoom;
-        private Player _player;
+        private readonly string[] _requiredItems = { "keyoflife", "goldmedallion" };
 
         public Room ContainingRoom { get; set; }
 
-        private string[] _requiredItems = { "keyoflife", "goldmedallion" };
-
-        public BossRoomProxy(Room bossRoom, Player player)
+        public BossRoomProxy(Room bossRoom)
         {
             _bossRoom = bossRoom;
-            _player = player;
         }
         public void Enter(Player player)
         {
@@ -45,21 +42,17 @@ namespace StarterGame
             player.InfoMessage("You hold up the Key of Life and the Gold Medallion. The gate is opening");
             player.CurrentRoom = _bossRoom;
 
-            _bossRoom.Delegate.Enter(player);
+            _bossRoom.Delegate?.Enter(player);
         }
 
         public Room OnGetExit(string direction)
         {
             //Player player = Player.Instance; Looking for instance in player class ERROR
-            foreach (string item in _requiredItems)
-            {
-              // if (!player.HasItem(item))
-                {
-                    Console.WriteLine($"You cannot enter the boss room without the {item}.");
+            // if (!player.HasItem(item))
+
+            Console.WriteLine("You feel a powerful presence ahead. You must 'enter' to proceed.");
                     return null;
-                }
-            }
-            return _bossRoom;
+                
         }
     }
     
