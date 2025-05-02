@@ -152,6 +152,7 @@ namespace StarterGame
             iceroom.SetExit("south", intersection9);
             iceroom.SetExit("north", ghostroom5);
             intersection9.SetExit("east", deadendroom8);
+            deadendroom8.SetExit("west", intersection9);
             intersection9.SetExit("south", ghostroom6);
             ghostroom6.SetExit("south", bossRoom);
             ghostroom6.SetExit("north", intersection9);
