@@ -215,7 +215,7 @@ namespace StarterGame
             kitchenRoom.Drop(pizza);
 
 
-            IItem ice_pack = new Item("ice pack", 0.2f, 2);
+            IItem ice_pack = new Item("icepack", 0.2f, 2);
             iceroom.Drop(ice_pack);
 
 
@@ -226,11 +226,11 @@ namespace StarterGame
             IItem potion = new Item("Potion", 0.2f, 10);
             chemicalroom.Drop(potion);
 
-            IItem key = new Item("key of life", 0.1f);
+            IItem key = new Item("keyoflife", 0.1f);
             deadendroom6.Drop(key);
 
 
-            IItem medallion = new Item("gold medallion", 0.2f);
+            IItem medallion = new Item("goldmedallion", 0.2f);
             chemicalroom.Drop(medallion);
 
 
@@ -239,8 +239,12 @@ namespace StarterGame
             //adding minotaur
             Minotaur mino = new Minotaur(bossRoom);
             bossRoom.MinotaurInRoom = mino;
+            //_ = new Room("A sealed gate blocked your path.");
+            //Room realBossRoom = new Room("The Shadowed Arena loom ahead...");
+            BossRoomProxy proxy = new BossRoomProxy(bossRoom);
 
-
+            bossRoom.Delegate = proxy;
+            proxy.ContainingRoom = bossRoom;
 
             Entrance = mainroom;
             Exit = bossRoom;

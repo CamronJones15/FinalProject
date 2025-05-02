@@ -23,6 +23,11 @@ namespace StarterGame
             _inventory = new ItemContainer("player inventory:");
         }
 
+        public bool HasItem(string itemName)
+        {
+            return _inventory.DoesContain(itemName);
+        }
+
         public void WaltTo(string direction)
         {
             Room nextRoom = this.CurrentRoom.GetExit(direction);
