@@ -244,7 +244,7 @@ namespace StarterGame
             Minotaur mino = new Minotaur(bossRoom);
             bossRoom.MinotaurInRoom = mino;
 
-            Item fireEnchantment = new Item("Fire Enchantment", 1);
+            Item fireEnchantment = new Item("flaming", 1);
             sword.Decorate(fireEnchantment);
             BossRoomProxy bossProxy = new BossRoomProxy(bossRoom);
             bossProxy.ContainingRoom = bossRoom;
