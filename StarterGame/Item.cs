@@ -61,7 +61,11 @@ namespace StarterGame{
             {
                 IsBroken = true;
             }
-            return Durability;
+            else
+            {
+                IsBroken = false;
+            }
+                return Durability;
         }
         override
         public string ToString(){

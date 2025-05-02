@@ -210,7 +210,7 @@ namespace StarterGame
         }
         public string Description()
         {
-            return "You are " + this.Tag + ".\n *** " + this.GetExits() + "\nFloor: " + (_floor==null?"empty":_floor.Name) + (_ghost == null ? "" : $"\nYou see a ghost here: {_ghost.Name}")+(_minotaur == null ? "" : $"\nThe minoutaur is here.. prepare for battle!");
+            return "You are " + this.Tag + ".\n *** " + this.GetExits() + "\nFloor: " + (_floor==null?"empty":_floor.Name) + (_ghost == null ? "" : $"\nYou see a ghost here: {_ghost.Name}")+(_minotaur == null ? "" : $"\nThe minotaur is here.. prepare for battle!");
         }
     }
 }

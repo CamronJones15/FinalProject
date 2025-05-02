@@ -134,6 +134,7 @@ namespace StarterGame
             hbdroom.SetExit("east", intersection3);
             hbdroom.SetExit("west", ghostroom1);
             intersection3.SetExit("south", ghostroom3);
+            intersection3.SetExit("west", hbdroom);
             ghostroom3.SetExit("south", kitchenRoom);
             ghostroom3.SetExit("north", intersection3);
             kitchenRoom.SetExit("south", intersection7);
@@ -178,6 +179,7 @@ namespace StarterGame
             emergencyroom.SetExit("south", intersection10);
             emergencyroom.SetExit("north", ghostroom4);
             intersection10.SetExit("east", deadendroom10);
+            intersection10.SetExit("north", emergencyroom);
             deadendroom10.SetExit("west", intersection10);
             intersection10.SetExit("west", deadendroom11);
             deadendroom11.SetExit("east", intersection10);
@@ -194,6 +196,7 @@ namespace StarterGame
             intersection11.SetExit("south", ghostroom8);
             
             ghostroom8.SetExit("south", gateRoom);
+            intersection5.SetExit("west", intersection4);
             gateRoom.SetExit("south", bossRoom);
             gateRoom.SetExit("north", ghostroom8);
             ghostroom8.SetExit("north", intersection11);

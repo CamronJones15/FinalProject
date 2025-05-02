@@ -28,7 +28,7 @@ namespace StarterGame
             }
             else
             {
-                WarningMessage($"The Minotaur roars in pain! Health remaining: {Health}");
+                WarningMessage($"The Minotaur roars in pain! it has  {Health} health remaining");
                 Attack(player);
             }
         }

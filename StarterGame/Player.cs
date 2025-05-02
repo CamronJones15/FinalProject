@@ -56,9 +56,10 @@ namespace StarterGame
                 {
                     if (!_inventory.GetItem("sword").IsBroken)
                     {
+                        int durabilityChange = 40;
                         damage = 20;
                         InfoMessage("You swing your sword at the Minotaur and slash it.");
-                        int durabilityLeft = _inventory.GetItem("sword").ReduceDurability(30);
+                        int durabilityLeft = _inventory.GetItem("sword").ReduceDurability(durabilityChange);
                     }
                     else
                     {
