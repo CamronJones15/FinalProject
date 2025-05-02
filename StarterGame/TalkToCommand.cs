@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace StarterGame
 {
+
+    //talk command that the player uses to get information from the ghost
     public class TalkToCommand : Command
     {
         public TalkToCommand() : base() 

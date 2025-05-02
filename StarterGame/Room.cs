@@ -20,7 +20,7 @@ namespace StarterGame
         private Room _bossRoom;
         public Room ContainingRoom { get; set; }
 
-        private string[] _requiredItems = { "Key of Life", "Gold Medallion" };
+        private string[] _requiredItems = { "key of life", "gold medallion" };
 
         public BossRoomProxy(Room realBossRoom)
         {
@@ -138,6 +138,7 @@ namespace StarterGame
             Delegate = null;
         }
 
+        //function that sets an exit for the room
         public void SetExit(string exitName, Room room)
         {
             _exits[exitName] = room;
@@ -168,6 +169,7 @@ namespace StarterGame
 
             return exitNames;
         }
+        //function that picks up an item off of the room floor based on the itemName that is passed
         public IItem Pickup(string itemName){
             IItem tempItem = null;
             if(_floor != null){
@@ -179,6 +181,7 @@ namespace StarterGame
             }
             return tempItem;
         }
+        //function to drop an item onto the room floor
         public void Drop(IItem item){
             _floor = item;
         }

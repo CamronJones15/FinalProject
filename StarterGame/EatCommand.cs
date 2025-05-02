@@ -5,13 +5,10 @@ namespace StarterGame
 {
     public class EatCommand : Command
     {
-        private CommandWords _words;
-
-        public EatCommand() : this(new CommandWords()) { }
-
-        public EatCommand(CommandWords commands) : base()
+        //command that allows the player to eat an item if its consumable
+        public EatCommand() : base()
         {
-            _words = commands;
+            
             this.Name = "eat";
         }
 
@@ -20,9 +17,7 @@ namespace StarterGame
         {
             if (this.HasSecondWord())
             {
-                string itemName = this.SecondWord;
-                player.Eat(itemName);
-                //player.NormalMessage(result);
+                player.Eat(SecondWord);
             }
             else
             {

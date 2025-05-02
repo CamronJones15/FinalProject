@@ -6,7 +6,7 @@ namespace StarterGame{
     public class DropCommand : Command {
 
         
-
+        //command that allows the player to drop an item from their inventory onto the room floor
         public DropCommand () : base(){
 
             this.Name = "drop"; 

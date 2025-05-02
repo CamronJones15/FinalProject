@@ -11,6 +11,7 @@ namespace StarterGame
     {
         private static GameWorld _instance;
 
+        //game world instance (singleton design pattern)
         public static GameWorld Instance
         {
             get

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace StarterGame
 {
+    //Minotaur class that extends from player class
     public class Minotaur : Player
     {
         public int AttackPower { get; set; }
@@ -16,7 +17,7 @@ namespace StarterGame
             AttackPower = 15;
         }
 
-        
+        //function that takes an amount of damage as an integer, and reduces that amount from the minotaur's health pool
         public void TakeDamage(int amount, Player player)
         {
             Health -= amount;
@@ -32,6 +33,7 @@ namespace StarterGame
             }
         }
 
+        //attack method that is used as a counter attack when the player attacks the minotaur
         private void Attack(Player player)
         {
             player.TakeDamage(this.AttackPower);

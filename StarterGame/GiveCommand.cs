@@ -8,6 +8,8 @@ namespace StarterGame
 {
     public class GiveCommand : Command
     {
+
+        //give command that the player uses to give ghosts an item
         public GiveCommand() : base()
         {
             this.Name = "give";
