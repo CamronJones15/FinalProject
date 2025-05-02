@@ -22,6 +22,10 @@ namespace StarterGame{
         public virtual float Weight{get{return _weight+(_decorator == null?0:_decorator.Weight);} set{ _weight = value;} }
         //needs Decorate function that takes an item still need to research this
 
+        public void Decorate(IItem decorator)
+        {
+            this.Decorator = decorator;
+        }
         public virtual bool IsEdible { get{return _isEdible;}}
         public virtual int HealAmount { get { return _healAmount; } }
         public Item() : this("NoName"){}

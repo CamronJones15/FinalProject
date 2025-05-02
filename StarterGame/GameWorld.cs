@@ -64,28 +64,28 @@ namespace StarterGame
         {
             // create rooms
             Room mainroom = new Room("the main entrance to the labrynth");
-            Room intersection1 = new Room("Intersection 1 : at a crossroads, with multiple paths ahead");
-            Room intersection2 = new Room("Intersection 2:  at a crossroads, with multiple paths ahead");
-            Room intersection3 = new Room("Intersection 3:  at a crossroads, with multiple paths ahead");
-            Room intersection4 = new Room("Intersection 4: at a crossroads, with multiple paths ahead");
-            Room intersection5 = new Room("Intersection 5: at a crossroads, with multiple paths ahead");
-            Room intersection6 = new Room("Intersection 6: at a crossroads, with multiple paths ahead");
-            Room intersection7 = new Room("Intersection 7: at a crossroads, with multiple paths ahead");
-            Room intersection8 = new Room("Intersection 8: at a crossroads, with multiple paths ahead");
-            Room intersection9 = new Room("Intersection 9: at a crossroads, with multiple paths ahead");
-            Room intersection10 = new Room("Intersection 10: at a crossroads, with multiple paths ahead");
-            Room intersection11 = new Room("Intersection 11:at a crossroads, with multiple paths ahead");
-            Room deadendroom1 = new Room("Deadend Room 1: at a deadend, the only available path is the way you came");
-            Room deadendroom4 = new Room("Deadend Room 4: at a deadend, the only available path is the way you came");
-            Room deadendroom5 = new Room("Deadend Room 5: at a deadend, the only available path is the way you came");
-            Room deadendroom6 = new Room("Deadend Room 6: at a deadend, the only available path is the way you came");
-            Room deadendroom7 = new Room("Deadend Room 7: at a deadend, the only available path is the way you came");
-            Room deadendroom8 = new Room("Deadend Room 8: at a deadend, the only available path is the way you came");
-            Room deadendroom9 = new Room("Deadend Room 9: at a deadend, the only available path is the way you came");
-            Room deadendroom10 = new Room("Deadend Room 10: at a deadend, the only available path is the way you came");
-            Room deadendroom11 = new Room("Deadend Room 11: at a deadend, the only available path is the way you came");
-            Room deadendroom12 = new Room("Deadend Room 12:  at a deadend, the only available path is the way you came");
-            Room deadendroom13 = new Room("Deadend Room 13: at a deadend, the only available path is the way you came");
+            Room intersection1 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection2 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection3 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection4 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection5 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection6 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection7 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection8 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection9 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection10 = new Room("at a crossroads, with multiple paths ahead");
+            Room intersection11 = new Room("at a crossroads, with multiple paths ahead");
+            Room deadendroom1 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom4 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom5 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom6 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom7 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom8 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom9 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom10 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom11 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom12 = new Room("at a deadend, the only available path is the way you came");
+            Room deadendroom13 = new Room("at a deadend, the only available path is the way you came");
             Room gateRoom = new Room("The Gate before the Boss Room.");
             Room bossRoom = new Room("Boss Room: in an arena where the minotaur sits");
             //Room hbd = new Room("describe room");
@@ -95,14 +95,14 @@ namespace StarterGame
             Room iceroom = new Room("Ice Room: You got to Healed. Grab an Ice Pack!");
             Room emergencyroom = new Room("Emergency Room: We Don't want you to have any scars. Grab an Bandage!");
             Room chemicalroom = new Room("Chemcial Room: There is an special potion. Collect it!");
-            Room ghostroom1 = new Room("Ghost Room 1: further in the labrynth");
-            Room ghostroom2 = new Room("Ghost Room 2: further in the labrynth");
-            Room ghostroom3 = new Room("Ghost Room 3:  further in the labrynth");
-            Room ghostroom4 = new Room("Ghost Room 4: further in the labrynth");
-            Room ghostroom5 = new Room("Ghost Room 5: further in the labrynth");
-            Room ghostroom6 = new Room("Ghost Room 6: further in the labrynth");
-            Room ghostroom7 = new Room("Ghost Room 7: further in the labrynth");
-            Room ghostroom8 = new Room("Ghost Room 8: further in the labrynth");
+            Room ghostroom1 = new Room("further in the labrynth");
+            Room ghostroom2 = new Room("further in the labrynth");
+            Room ghostroom3 = new Room("further in the labrynth");
+            Room ghostroom4 = new Room("further in the labrynth");
+            Room ghostroom5 = new Room("further in the labrynth");
+            Room ghostroom6 = new Room("further in the labrynth");
+            Room ghostroom7 = new Room("further in the labrynth");
+            Room ghostroom8 = new Room("further in the labrynth");
             //Ghost Rooms 
             Ghost john = new Ghost(ghostroom1,"John", "Be careful... the minotaur is near."); //we seriously need better hints lmao
             Ghost reign = new Ghost(ghostroom2,"Reign", "Solve the puzzle, or be trapped forever!");
@@ -111,12 +111,7 @@ namespace StarterGame
             reign.PreferredItem = "Cookie";
             bob.PreferredItem = "CrunchWrap";
             ghostroom1.GhostInRoom = john;
-            ghostroom2.GhostInRoom = john;
-            ghostroom3.GhostInRoom = john;
-            ghostroom4.GhostInRoom = reign;
             ghostroom5.GhostInRoom = reign;
-            ghostroom6.GhostInRoom = bob;
-            ghostroom7.GhostInRoom = bob;
             ghostroom8.GhostInRoom = bob;
 
             //set exits
@@ -248,7 +243,7 @@ namespace StarterGame
             Minotaur mino = new Minotaur(bossRoom);
             bossRoom.MinotaurInRoom = mino;
 
-           BossRoomProxy bossProxy = new BossRoomProxy(bossRoom);
+            BossRoomProxy bossProxy = new BossRoomProxy(bossRoom);
             bossProxy.ContainingRoom = bossRoom;
             gateRoom.Delegate = bossProxy;
 
