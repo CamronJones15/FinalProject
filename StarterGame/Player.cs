@@ -108,6 +108,7 @@ namespace StarterGame
             if(item == null)
             {
                 WarningMessage($"You don't have an item called {itemName} to eat.");
+                return;
                 
             }
             if(item is Item edible && edible.IsEdible)

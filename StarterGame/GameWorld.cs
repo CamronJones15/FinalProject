@@ -125,6 +125,7 @@ namespace StarterGame
             intersection1.SetExit("north", mainroom);
             intersection1.SetExit("west", intersection2);
             intersection2.SetExit("west", deadendroom1);
+            intersection2.SetExit("east", intersection1);
             deadendroom1.SetExit("east", intersection2);
             intersection2.SetExit("south", ghostroom2);
             ghostroom1.SetExit("east", hbdroom);
@@ -202,7 +203,7 @@ namespace StarterGame
 
             IItem diamonds = new Item("diamonds", 0.2f);
             IItem crunchwrap = new Item("crunchwrap", 0.1f);
-            deadendroom13.Drop(diamonds);
+            deadendroom4.Drop(diamonds);
 
             
             IItem cake = new Item("cake", 0.2f , 20);
@@ -212,19 +213,19 @@ namespace StarterGame
             IItem spinach = new Item("spinach", 0.2f, 20);
             greenRoom.Drop(spinach);
 
-            IItem pizza = new Item("Pizza", 0.2f, 10);
+            IItem pizza = new Item("pizza", 0.2f, 10);
             kitchenRoom.Drop(pizza);
 
 
-            IItem ice_pack = new Item("icepack", 0.2f, 2);
-            iceroom.Drop(ice_pack);
-
-
-            IItem bandages = new Item("bandages", 0.1f, 5);
-            emergencyroom.Drop(bandages);
+            IItem ice = new Item("ice", 0.2f, 2);
+            iceroom.Drop(ice);
 
             
-            IItem potion = new Item("Potion", 0.2f, 10);
+            IItem medicine = new Item("medicine", 0.1f, 5);
+            emergencyroom.Drop(medicine);
+
+            
+            IItem potion = new Item("potion", 0.2f, 10);
             chemicalroom.Drop(potion);
 
             IItem key = new Item("keyoflife", 0.1f);
