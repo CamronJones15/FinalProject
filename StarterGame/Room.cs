@@ -134,7 +134,12 @@ namespace StarterGame
 
         public void Enter(Player player)
         {
-            _delegate.Enter(player);
+            player.WarningMessage("You have entered a trap room!!");
+            player.WarningMessage("Say the magic word to escape");
+            if(_delegate != null)
+            {
+                _delegate.Enter(player);
+            }
         }
     }
     public class Room : Trigger
