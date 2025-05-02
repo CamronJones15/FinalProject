@@ -239,7 +239,7 @@ namespace StarterGame
 
 
             IItem medallion = new Item("goldmedallion", 0.2f);
-            ghostroom1.Drop(medallion);
+            ghostroom4.Drop(medallion);
 
 
             Item sword = new Item("sword", 1.5f, true, 100);
