@@ -11,6 +11,8 @@ namespace StarterGame{
         string Name { get; set;}
         float Weight { get; set; }
         string Description{get;}
+        int ReduceDurability(int amount);
+        bool IsBroken { get; set; }
         //void Decorate(IItem decorator); commented out temporarily
     }
 

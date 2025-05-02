@@ -9,7 +9,12 @@ namespace StarterGame{
 
         private bool _isEdible = false;
         private int _healAmount = 0;
-
+        private bool _isDegradable = false;
+        public bool IsDegradable { get { return _isDegradable; } set {_isDegradable = value; } }
+        private int _durability = 0;
+        public int Durability { get { return _durability; } set { _durability = value; } }
+        private bool _isBroken = false;
+        public bool IsBroken { get { return _isBroken; } set { _isBroken = value; } }
         public string Name{get{return _name;}set{ _name = value;} }
 
         //public float Volume{get{return _volume;} set{ _volume = value;} }
@@ -28,7 +33,13 @@ namespace StarterGame{
             _name = name;
             _weight = weight;
         }
-
+        public Item(string name, float weight, bool isDegradable, int durability)
+        {
+            _name = name;
+            _weight = weight;
+            IsDegradable = isDegradable;
+            Durability = durability;
+        }
         public Item(string name, float weight, int healAmount)
         {
             _name = name;
@@ -43,7 +54,15 @@ namespace StarterGame{
         {
              get{ return ToString(); } 
         }
-
+        public int ReduceDurability(int amount)
+        {
+            Durability -= amount;
+            if(Durability <= 0)
+            {
+                IsBroken = true;
+            }
+            return Durability;
+        }
         override
         public string ToString(){
             return (this.Name + "\nweight: " + this.Weight);
