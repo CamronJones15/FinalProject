@@ -121,6 +121,7 @@ namespace StarterGame
             //set exits
             mainroom.SetExit("south", intersection1);
             intersection1.SetExit("east", ghostroom1);
+            intersection1.SetExit("north", mainroom);
             intersection1.SetExit("west", intersection2);
             intersection2.SetExit("west", deadendroom1);
             deadendroom1.SetExit("east", intersection2);
@@ -194,62 +195,43 @@ namespace StarterGame
             //hbd.Delegate = minigame1;
 
 
-            //create a chest
-            IItemContainer chest1 = new ItemContainer("chest", 0.25f);
-            IItem item1 = new Item("Flashlight", 0.2f);
-            chest1.Insert(item1);
-            item1 = new Item("Cookie", 0.1f);
-            chest1.Insert(item1);
-            mainroom.Drop(chest1);
+            //Adding items to the game
+            IItem cookie = new Item("cookie", 0.1f);
+            mainroom.Drop(cookie);
 
-            IItemContainer chest2 = new ItemContainer("chest", 0.25f);
-            IItem item2 = new Item("Diamonds", 0.2f);
-            chest2.Insert(item2);
-            item2 = new Item("CrunchWrap", 0.1f);
-            chest2.Insert(item2);
-            deadendroom13.Drop(chest2);
+            IItem diamonds = new Item("diamonds", 0.2f);
+            IItem crunchwrap = new Item("crunchwrap", 0.1f);
+            deadendroom13.Drop(diamonds);
 
-            IItemContainer chest3 = new ItemContainer("chest", 0.25f);
-            IItem item3 = new Item("Chocolate Cake", 0.2f , 20);
-            chest3.Insert(item3);
-            item3 = new Item("Strawberry Cake", 0.1f , 20);
-            chest3.Insert(item3);
-            hbdroom.Drop(chest3);
+            
+            IItem cake = new Item("cake", 0.2f , 20);
+            hbdroom.Drop(cake);
 
-            IItemContainer chest4 = new ItemContainer("chest", 0.25f);
-            IItem item4 = new Item("Spinach", 0.2f ,20);
-            chest4.Insert(item4);
-            greenRoom.Drop(chest4);
 
-            IItemContainer chest5 = new ItemContainer("chest", 0.25f);
-            IItem item5 = new Item("Pizza", 0.2f, 10);
-            chest5.Insert(item5);
-            kitchenRoom.Drop(chest5);
+            IItem spinach = new Item("spinach", 0.2f, 20);
+            greenRoom.Drop(spinach);
 
-            IItemContainer chest6 = new ItemContainer("chest", 0.25f);
-            IItem item6 = new Item("Ice Pack", 0.2f, 2);
-            chest6.Insert(item6);
-            iceroom.Drop(chest6);
+            IItem pizza = new Item("Pizza", 0.2f, 10);
+            kitchenRoom.Drop(pizza);
 
-            IItemContainer chest7 = new ItemContainer("chest", 0.25f);
-            IItem item7 = new Item("Bandages", 0.1f , 5);
-            chest7.Insert(item7);
-            emergencyroom.Drop(chest7);
 
-            IItemContainer chest8 = new ItemContainer("chest", 0.25f);
-            IItem item8 = new Item("Potion", 0.2f, 10);
-            chest8.Insert(item8);
-            chemicalroom.Drop(chest8);
+            IItem ice_pack = new Item("ice pack", 0.2f, 2);
+            iceroom.Drop(ice_pack);
 
-            IItemContainer chest9 = new ItemContainer("chest", 0.25f);
-            IItem item9 = new Item("Key Of Life", 0.1f);
-            chest9.Insert(item9);
-            deadendroom6.Drop(chest9);
 
-            IItemContainer chest10 = new ItemContainer("chest", 0.25f);
-            IItem item10 = new Item("Gold Medallion", 0.2f);
-            chest10.Insert(item10);
-            chemicalroom.Drop(chest10);
+            IItem bandages = new Item("bandages", 0.1f, 5);
+            emergencyroom.Drop(bandages);
+
+            
+            IItem potion = new Item("Potion", 0.2f, 10);
+            chemicalroom.Drop(potion);
+
+            IItem key = new Item("key of life", 0.1f);
+            deadendroom6.Drop(key);
+
+
+            IItem medallion = new Item("gold medallion", 0.2f);
+            chemicalroom.Drop(medallion);
 
 
             Item sword = new Item("sword", 1.5f);
