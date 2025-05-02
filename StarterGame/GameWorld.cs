@@ -160,6 +160,7 @@ namespace StarterGame
             greenRoom.SetExit("north", ghostroom2);
             intersection4.SetExit("east", intersection5);
             intersection4.SetExit("west", intersection6);
+            intersection4.SetExit("north", greenRoom);
             intersection6.SetExit("south", deadendroom4);
             deadendroom4.SetExit("north", intersection6);
             intersection6.SetExit("east", intersection4);
@@ -236,13 +237,15 @@ namespace StarterGame
             IItem medallion = new Item("goldmedallion", 0.2f);
             ghostroom4.Drop(medallion);
 
-
+            
             Item sword = new Item("sword", 1.5f, true, 100);
             deadendroom4.Drop(sword);
             //adding minotaur
             Minotaur mino = new Minotaur(bossRoom);
             bossRoom.MinotaurInRoom = mino;
 
+            Item fireEnchantment = new Item("Fire Enchantment", 1);
+            sword.Decorate(fireEnchantment);
             BossRoomProxy bossProxy = new BossRoomProxy(bossRoom);
             bossProxy.ContainingRoom = bossRoom;
             gateRoom.Delegate = bossProxy;
