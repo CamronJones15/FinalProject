@@ -25,6 +25,9 @@ namespace StarterGame
             {
                 NormalMessage("The Minotaur has fallen to your strength");
                 player.CurrentRoom.MinotaurInRoom = null;
+                NormalMessage("You win!");
+                Environment.Exit(0);
+                    
             }
             else
             {
