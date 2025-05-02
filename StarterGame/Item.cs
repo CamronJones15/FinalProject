@@ -15,12 +15,12 @@ namespace StarterGame{
         public int Durability { get { return _durability; } set { _durability = value; } }
         private bool _isBroken = false;
         public bool IsBroken { get { return _isBroken; } set { _isBroken = value; } }
-        public string Name{get{return _name;}set{ _name = value;} }
+        public string Name{ get { return _name + (_decorator == null?"": $"[{_decorator.Name}]"); } set { _name = value; } }
 
         //public float Volume{get{return _volume;} set{ _volume = value;} }
 
         public virtual float Weight{get{return _weight+(_decorator == null?0:_decorator.Weight);} set{ _weight = value;} }
-        //needs Decorate function that takes an item still need to research this
+        
 
         public void Decorate(IItem decorator)
         {
