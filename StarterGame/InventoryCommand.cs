@@ -8,6 +8,7 @@ namespace StarterGame
 {
     class InventoryCommand : Command
     {
+        //Inventory command that displays the items within the players inventory
         public InventoryCommand() : base()
         {
             this.Name = "inventory";

@@ -8,6 +8,8 @@ namespace StarterGame
     /*
      * Fall 2024
      */
+
+    //player class that contains all the function needed for the player to use
     public class Player
     {
         private int _health = 100;
@@ -28,6 +30,7 @@ namespace StarterGame
             return _inventory.DoesContain(itemName);
         }
 
+        //function that allows player to move to different rooms
         public void WaltTo(string direction)
         {
             Room nextRoom = this.CurrentRoom.GetExit(direction);
@@ -88,10 +91,12 @@ namespace StarterGame
                 ErrorMessage($"You try to dig at {_location}, but you need a shovel!");
             }
         }
+        
         public void Give(IItem item)
         {
             _inventory.Insert(item);
         }
+        
         public IItem Take(string itemName)
         {
             return _inventory.Remove(itemName);
