@@ -257,9 +257,9 @@ namespace StarterGame
             Minotaur mino = new Minotaur(bossRoom);
             bossRoom.MinotaurInRoom = mino;
 
-            BossRoomProxy proxy = new BossRoomProxy(bossRoom);
-            bossRoom.Delegate = proxy;
-            gateRoom.Delegate = proxy;
+            //BossRoomProxy proxy = new BossRoomProxy(bossRoom);
+            //bossRoom.Delegate = proxy;
+            //gateRoom.Delegate = proxy;
 
             TrapRoom trapDelegate = new TrapRoom("sprout");
             trapDelegate.ContainingRoom = greenTrap;
