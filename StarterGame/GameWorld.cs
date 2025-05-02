@@ -103,9 +103,6 @@ namespace StarterGame
             Room ghostroom6 = new Room("Ghost Room 6: further in the labrynth");
             Room ghostroom7 = new Room("Ghost Room 7: further in the labrynth");
             Room ghostroom8 = new Room("Ghost Room 8: further in the labrynth");
-            Room greenTrap = new Room("Snaring Vines Room");
-            Room shadowTrap = new Room("Shadow Binding Chabmer");
-            Room trapTreasure = new Room("Dusty Treasure Vault");
             //Ghost Rooms 
             Ghost john = new Ghost(ghostroom1,"John", "Be careful... the minotaur is near."); //we seriously need better hints lmao
             Ghost reign = new Ghost(ghostroom2,"Reign", "Solve the puzzle, or be trapped forever!");
@@ -158,26 +155,22 @@ namespace StarterGame
             intersection9.SetExit("east", deadendroom8);
             deadendroom8.SetExit("west", intersection9);
             intersection9.SetExit("south", ghostroom6);
-            ghostroom6.SetExit("south", shadowTrap);
-            shadowTrap.SetExit("north", ghostroom6);
-            shadowTrap.SetExit("south", gateRoom);
+            ghostroom6.SetExit("south", gateRoom);
             gateRoom.SetExit("south", bossRoom);
-            gateRoom.SetExit("north", shadowTrap);
+            gateRoom.SetExit("north", ghostroom6);
             ghostroom6.SetExit("north", intersection9);
             
-            ghostroom2.SetExit("south", greenTrap);
-            greenTrap.SetExit("north", ghostroom2);
-            greenTrap.SetExit("south", greenRoom);
+            ghostroom2.SetExit("south", greenRoom);
             ghostroom2.SetExit("north", intersection2);
             greenRoom.SetExit("south", intersection4);
-            greenRoom.SetExit("north", greenTrap);
+            greenRoom.SetExit("north", ghostroom2);
             intersection4.SetExit("east", intersection5);
             intersection4.SetExit("west", intersection6);
             intersection6.SetExit("south", deadendroom4);
             deadendroom4.SetExit("north", intersection6);
             intersection6.SetExit("east", intersection4);
-            intersection4.SetExit("south", trapTreasure);
-            trapTreasure.SetExit("north", intersection4);
+            intersection4.SetExit("south", deadendroom9);
+            deadendroom9.SetExit("north", intersection4);
             intersection5.SetExit("south", ghostroom4);
             
             ghostroom4.SetExit("south", emergencyroom);
@@ -257,22 +250,10 @@ namespace StarterGame
             Minotaur mino = new Minotaur(bossRoom);
             bossRoom.MinotaurInRoom = mino;
 
-           // BossRoomProxy proxy = new BossRoomProxy(bossRoom);
-            //BossRoomProxy proxy = new BossRoomProxy(bossRoom);
-            //bossRoom.Delegate = proxy;
-            //gateRoom.Delegate = proxy;
+           BossRoomProxy bossProxy = new BossRoomProxy(bossRoom);
+            bossProxy.ContainingRoom = bossRoom;
+            gateRoom.Delegate = bossProxy;
 
-            TrapRoom trapRoom = new TrapRoom("sprout");
-            trapRoom.ContainingRoom = greenTrap;
-            greenTrap.Delegate = trapRoom;
-
-            TrapRoom shadowDelegate = new TrapRoom("release");
-            shadowDelegate.ContainingRoom = shadowTrap;
-            shadowTrap.Delegate = shadowDelegate;
-
-            TrapRoom vaultTrap = new TrapRoom("escape");
-            vaultTrap.ContainingRoom = trapTreasure;
-            trapTreasure.Delegate = vaultTrap;
 
 
             Entrance = mainroom;
