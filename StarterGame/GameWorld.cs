@@ -236,7 +236,7 @@ namespace StarterGame
             chemicalroom.Drop(medallion);
 
 
-            Item sword = new Item("sword", 1.5f);
+            Item sword = new Item("sword", 1.5f, true, 100);
             deadendroom4.Drop(sword);
             //adding minotaur
             Minotaur mino = new Minotaur(bossRoom);
