@@ -86,6 +86,7 @@ namespace StarterGame
             Room deadendroom11 = new Room("Deadend Room 11: at a deadend, the only available path is the way you came");
             Room deadendroom12 = new Room("Deadend Room 12:  at a deadend, the only available path is the way you came");
             Room deadendroom13 = new Room("Deadend Room 13: at a deadend, the only available path is the way you came");
+            Room gateRoom = new Room("The Gate before the Boss Room.");
             Room bossRoom = new Room("Boss Room: in an arena where the minotaur sits");
             //Room hbd = new Room("describe room");
             Room hbdroom = new Room("Happy Birthday Room: There is an Suprise Item in Here!!!");
@@ -154,7 +155,9 @@ namespace StarterGame
             intersection9.SetExit("east", deadendroom8);
             deadendroom8.SetExit("west", intersection9);
             intersection9.SetExit("south", ghostroom6);
-            ghostroom6.SetExit("south", bossRoom);
+            ghostroom6.SetExit("south", gateRoom);
+            gateRoom.SetExit("south", bossRoom);
+            gateRoom.SetExit("north", ghostroom6);
             ghostroom6.SetExit("north", intersection9);
             
             ghostroom2.SetExit("south", greenRoom);
@@ -190,7 +193,9 @@ namespace StarterGame
             deadendroom13.SetExit("west", intersection11);
             intersection11.SetExit("south", ghostroom8);
             
-            ghostroom8.SetExit("south", bossRoom);
+            ghostroom8.SetExit("south", gateRoom);
+            gateRoom.SetExit("south", bossRoom);
+            gateRoom.SetExit("north", ghostroom8);
             ghostroom8.SetExit("north", intersection11);
             //setup delegates
             //MiniGame minigame1 = new MiniGame();
@@ -242,12 +247,11 @@ namespace StarterGame
             //adding minotaur
             Minotaur mino = new Minotaur(bossRoom);
             bossRoom.MinotaurInRoom = mino;
-            //_ = new Room("A sealed gate blocked your path.");
-            //Room realBossRoom = new Room("The Shadowed Arena loom ahead...");
-            BossRoomProxy proxy = new BossRoomProxy(bossRoom);
 
+            BossRoomProxy proxy = new BossRoomProxy(bossRoom);
             bossRoom.Delegate = proxy;
-            proxy.ContainingRoom = bossRoom;
+            gateRoom.Delegate = proxy;
+
 
             Entrance = mainroom;
             Exit = bossRoom;

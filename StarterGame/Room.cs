@@ -18,20 +18,23 @@ namespace StarterGame
 
     public class BossRoomProxy : IRoomDelegate
     {
-        private Room _bossRoom;
+        private readonly Room _bossRoom;
+        private Player _player;
+
         public Room ContainingRoom { get; set; }
 
         private string[] _requiredItems = { "keyoflife", "goldmedallion" };
 
-        public BossRoomProxy(Room realBossRoom)
+        public BossRoomProxy(Room bossRoom, Player player)
         {
-            _bossRoom = realBossRoom;
+            _bossRoom = bossRoom;
+            _player = player;
         }
         public void Enter(Player player)
         {
-            foreach (var item in _requiredItems)
+            foreach (var requiredItem in _requiredItems)
             {
-                if (!player.HasItem(item))
+                if (!player.HasItem(requiredItem))
                 {
                     player.WarningMessage("The massive doors remain. You sense you're missing something important...");
                     player.CurrentRoom = ContainingRoom;
@@ -41,7 +44,7 @@ namespace StarterGame
             player.InfoMessage("You hold up the Key of Life and the Gold Medallion. The gate is opening");
             player.CurrentRoom = _bossRoom;
 
-            _bossRoom?.Delegate?.Enter(player);
+            _bossRoom.Delegate.Enter(player);
         }
 
         public Room OnGetExit(string direction)
